@@ -1,0 +1,110 @@
+.contact-page {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 8rem 2rem;
+  color: #ffffff;
+}
+
+.contact-hero {
+  text-align: center;
+  max-width: 800px;
+  margin-bottom: 4rem;
+}
+
+/* Reusing your Homepage Title Style */
+.contact-hero .hero-title {
+  margin-bottom: 1.5rem;
+}
+
+.contact-hero .hero-title span {
+  color: #7f5aff;
+}
+
+.contact-form-wrapper {
+  width: 100%;
+  max-width: 700px;
+  position: relative;
+}
+
+/* Subtle Glassmorphism effect */
+#contact-form {
+  background: rgba(255, 255, 255, 0.03);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 3rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.form-group label {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+#contact-form input, 
+#contact-form textarea {
+  background: rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  padding: 1.2rem;
+  color: white;
+  font-family: inherit;
+  transition: all 0.3s ease;
+}
+
+/* High-tech focus state */
+#contact-form input:focus, 
+#contact-form textarea:focus {
+  outline: none;
+  border-color: #7f5aff;
+  background: rgba(127, 90, 255, 0.05);
+  box-shadow: 0 0 20px rgba(127, 90, 255, 0.1);
+}
+
+#message {
+  min-height: 150px;
+  resize: none;
+}
+
+/* Matching your Primary Button from Home */
+.primary-btn {
+  margin-top: 1rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 0.8rem;
+  font-size: 1rem;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  .form-row {
+    grid-template-columns: 1fr;
+  }
+  
+  #contact-form {
+    padding: 2rem;
+  }
+}

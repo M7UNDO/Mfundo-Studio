@@ -1,0 +1,175 @@
+header {
+  height: 5rem;
+}
+
+.navbar {
+  height: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+}
+
+.nav-menu {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  top: 5rem;
+  right: 0;
+  height: 100%;
+  width: 80%;
+  transform: translateX(100%);
+  transition: all 0.3s ease;
+}
+
+.nav-menu.active {
+  transform: translateX(0);
+}
+
+.navlinks {
+  height: 100%;
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navlinks li {
+  width: 100%;
+  padding: 1rem;
+}
+
+.navlinks li a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+}
+
+.logo {
+}
+
+.menu-btn {
+  background: none;
+  border: none;
+  outline: none;
+  display: block;
+  cursor: pointer;
+  padding: 1rem;
+}
+
+.menu-lines {
+  position: relative;
+  display: block;
+  width: 2.5rem;
+  height: 1.5px;
+  outline: none;
+  background: var(--typography-colour);
+  transition: all 0.3s ease;
+}
+
+.menu-lines::after,
+.menu-lines::before {
+  content: "";
+  position: absolute;
+  width: 2.5rem;
+  height: 1.5px;
+  background: var(--typography-colour);
+  left: 0;
+  transition: all 0.3s ease;
+}
+
+.menu-lines::before {
+  top: -8px;
+}
+.menu-lines::after {
+  top: 8px;
+}
+
+.menu-open .menu-lines {
+  background: transparent;
+}
+
+.menu-open .menu-lines::before {
+  top: 0;
+  transform: rotate(45deg);
+}
+
+.menu-open .menu-lines::after {
+  top: 0;
+  transform: rotate(-45deg);
+}
+
+@media screen and (min-width: 768px) {
+  .menu-btn {
+    display: none;
+  }
+
+  .nav-menu {
+    display: flex;
+    flex-direction: row;
+    gap: 2rem;
+    align-items: center;
+    position: static;
+    width: fit-content;
+    height: 100%;
+    transform: translateX(0);
+    background: none;
+  }
+
+  .navlinks {
+    flex-direction: row;
+  }
+
+  .navlinks li {
+    font-size: 1.4rem;
+    width: fit-content;
+    border: none;
+    background: none;
+    padding: 1rem 0.5rem;
+  }
+
+  .navlinks li a {
+    position: relative;
+  }
+
+  .navlinks a::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: -1rem;
+    width: 100%;
+    height: 0.3rem;
+    background-color: var(--primary-colour);
+    transform: scaleX(0);
+    transform-origin: center;
+    transition: transform 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .navlinks a.active {
+    color: var(--primary-colour);
+    font-weight: 600;
+  }
+
+  .navlinks a.active::after {
+    transform: scaleX(1);
+  }
+
+  .nav-social{
+    font-size: 1.8rem;
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    border-left: 1px solid gray;
+    padding: 0 2rem;
+  }
+
+  .nav-social a{
+    transition: all 0.2s ease;
+  }
+
+  .nav-social a:hover{
+    transform: scale(1.1);
+    color: var(--accent-colour);
+  }
+}

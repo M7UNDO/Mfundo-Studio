@@ -1,0 +1,35 @@
+.starfield-bg {
+  position: fixed;
+  inset: 0;
+  background: #02040a;
+  z-index: -1;
+  overflow: hidden;
+}
+
+canvas {
+  position: absolute;
+  inset: 0;
+}
+
+.galaxy-gradient {
+  position: absolute;
+  width: 150vw;
+  height: 150vh;
+  top: -25vh;
+  left: -25vw;
+  background: radial-gradient(circle at center, 
+    rgba(76, 0, 255, 0.15) 0%, 
+    rgba(0, 212, 255, 0.05) 30%, 
+    transparent 70%
+  );
+  filter: blur(80px);
+  mix-blend-mode: screen;
+  pointer-events: none;
+}
+
+.vignette {
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 20%, rgba(0,0,0,0.8) 100%);
+  pointer-events: none;
+}

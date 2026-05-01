@@ -1,0 +1,43 @@
+:root{
+  --accent-colour: #256EFF;
+  --accent-colour-hover: #346bd9;
+  --background-colour:  rgb(13, 13, 13);
+  --primary-colour: rgb(230, 226, 236);;
+  --typography-colour: rgb(230, 226, 236);
+  
+  --primary-font: "Roboto", sans-serif;
+  --secondary-font: "Manrope", sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+*{
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body{
+  background-color: var(--background-colour);
+  color: var(--typography-colour);
+  font-family: var(--primary-font);
+  font-size: 1.6rem;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+@media screen and (min-width: 600px){
+  
+}
+
+@media(prefers-color-scheme: light) {
+  :root{
+
+  }
+}
+
