@@ -2,7 +2,7 @@
   position: fixed;
   inset: 0;
   z-index: -1;
-  background: #0a0a0c; /* Deep matte black */
+  background: #0a0a0c; 
   overflow: hidden;
 }
 
@@ -12,7 +12,7 @@
   display: block;
 }
 
-/* Optional: Add a subtle overlay to make text pop */
+
 .magnetic-container::after {
   content: "";
   position: absolute;

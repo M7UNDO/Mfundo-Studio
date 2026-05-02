@@ -8,7 +8,6 @@ export default function Home() {
   const container = useRef();
 
   useGSAP(() => {
-    // Pro stagger entrance for the text
     const tl = gsap.timeline();
     tl.from(".hero-badge", { opacity: 0, y: 20, duration: 0.8 })
       .from(".hero-title span", { 
@@ -24,11 +23,11 @@ export default function Home() {
 
   return (
     <main className="home-page" ref={container}>
-      <MagneticDotGrid />
+      {/*<MagneticDotGrid />*/}
       
       <section className="hero-section">
         <div className="hero-content">
-          <span className="hero-badge">Available for 2026 roles</span>
+          <span className="hero-badge">Available for 2026/2027 roles</span>
           
           <h1 className="hero-title">
             <span>Mfundo</span> <span>Dhlamini.</span>

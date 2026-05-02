@@ -15,7 +15,7 @@ export default function StarfieldBackground() {
     const canvas = canvasRef.current;
     const ctx = canvas.getContext("2d");
     let width, height, stars = [];
-    let time = 0; // Global time tracker for the drift
+    let time = 0;
     
     const mouse = { x: 0, y: 0, targetX: 0, targetY: 0 };
     const scroll = { value: 0 };
@@ -50,7 +50,7 @@ export default function StarfieldBackground() {
     };
 
     const tick = () => {
-      time += 0.5; // Increment time for movement
+      time += 0.5;
       
       mouse.x += (mouse.targetX - mouse.x) * 0.05;
       mouse.y += (mouse.targetY - mouse.y) * 0.05;
@@ -58,17 +58,16 @@ export default function StarfieldBackground() {
       ctx.clearRect(0, 0, width, height);
       
       stars.forEach(star => {
-        // 1. Calculate Idle Drift (Sin/Cos wave)
+
         const driftX = Math.cos(time * 0.01 * star.driftSpeed + star.driftOffset) * 15;
         const driftY = Math.sin(time * 0.01 * star.driftSpeed + star.driftOffset) * 15;
 
-        // 2. Apply Drift to the base coordinates within the calculation
+
         const factor = 1000 / (1000 - (scroll.value * 500)); 
         const x = (star.x + driftX - width / 2 + mouse.x * (star.z / 500)) * factor + width / 2;
         const y = (star.y + driftY - height / 2 + mouse.y * (star.z / 500)) * factor + height / 2;
         const s = star.size * factor;
 
-        // 3. Optional: Add a subtle twinkle to the opacity
         const twinkle = star.opacity * (0.6 + Math.abs(Math.sin(time * star.twinkleSpeed)) * 0.4);
 
         if (x > -50 && x < width + 50 && y > -50 && y < height + 50) {

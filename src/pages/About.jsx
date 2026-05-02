@@ -6,6 +6,7 @@ export default function About() {
 
   return (
     <section className="about-section">
+      <h1>Hello</h1>
         
     </section>
   );

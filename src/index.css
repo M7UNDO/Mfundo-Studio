@@ -1,5 +1,5 @@
 :root{
-  --accent-colour: #256EFF;
+  --accent-colour: #7f5aff;
   --accent-colour-hover: #346bd9;
   --background-colour:  rgb(13, 13, 13);
   --primary-colour: rgb(230, 226, 236);;
@@ -11,6 +11,7 @@
 
 html{
   font-size: 62.5%;
+  scroll-behavior: smooth;
 }
 
 *{
