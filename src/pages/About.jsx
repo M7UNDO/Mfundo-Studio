@@ -38,8 +38,8 @@ export default function About() {
 
             <div className="bio-text">
               <p>
-                I'm an Honors Digital Arts student specialising in <strong>Game Design</strong> and
-                <strong>Interactive Media</strong>, with hands-on experience in {""}
+                I'm an Honors Digital Arts student specialising in <strong>Game Design</strong> and{""}
+                 <strong>Interactive Media</strong>, with hands-on experience in {""}
                 <strong>Front-end development, UI/UX Design</strong>, and building brand-driven digital solutions.I
                 enjoy working at the intersection of design and technology, where visuals, interaction, and code come
                 together to create experiences that feel intuitive, intentional, and engaging.
