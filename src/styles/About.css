@@ -1,0 +1,219 @@
+/* Mobile First Styling */
+.about-section {
+  width: 100%;
+  min-height: 100vh;
+  padding: 10rem 2rem 5rem;
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+}
+
+.about-content {
+  width: 100%;
+  max-width: 1100px;
+}
+
+.about-intro {
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: center;
+  gap: 3rem;
+}
+
+.profile {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Typography & Badges */
+.about-badge {
+  display: inline-block;
+  padding: 0.6rem 1.4rem;
+  background: rgba(127, 90, 255, 0.1);
+  border: 1px solid rgba(127, 90, 255, 0.3);
+  border-radius: 100px;
+  color: #7f5aff;
+  font-size: 1.2rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 2rem;
+}
+
+.about-title {
+  font-size: 4rem;
+  line-height: 1.1;
+  margin-bottom: 4rem;
+}
+
+.about-title span {
+  color: #7f5aff;
+  display: block;
+}
+
+.section-label {
+  font-size: 1.4rem;
+  text-transform: uppercase;
+  color: #7f5aff;
+  letter-spacing: 2px;
+  margin: 6rem 0 3rem;
+  font-weight: 700;
+}
+
+/* Bio Section */
+.bio-text p {
+  font-size: 1.8rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.8);
+  margin-bottom: 2rem;
+}
+
+.bio-text strong {
+  color: #ffffff;
+  font-weight: 600;
+}
+
+/* Experience Cards */
+.experience-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.experience-card {
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 3rem;
+  border-radius: 24px;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.experience-card.active {
+  background: linear-gradient(145deg, rgba(127, 90, 255, 0.05), rgba(255, 255, 255, 0.02));
+  border-color: rgba(127, 90, 255, 0.3);
+}
+
+.experience-card:hover {
+  transform: translateY(-5px);
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.card-header {
+  margin-bottom: 1.5rem;
+}
+
+.card-header h3 {
+  font-size: 2.2rem;
+  margin-bottom: 0.5rem;
+}
+
+.card-header .date {
+  font-size: 1.3rem;
+  color: #7f5aff;
+  font-weight: 600;
+}
+
+.experience-card h4 {
+  font-size: 1.6rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-bottom: 1.5rem;
+}
+
+.experience-card p {
+  font-size: 1.5rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.reference-info {
+  margin-top: 2rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.05);
+  font-size: 1.2rem;
+  color: rgba(255, 255, 255, 0.4);
+}
+
+/* Skills & Achievements Grid */
+.bottom-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+.skill-tags span {
+  padding: 0.8rem 1.6rem;
+  background: rgba(127, 90, 255, 0.05);
+  border: 1px solid rgba(127, 90, 255, 0.1);
+  border-radius: 8px;
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.achievement-item {
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.02);
+  border-radius: 16px;
+  margin-bottom: 1.5rem;
+}
+
+.achievement-item strong {
+  display: block;
+  font-size: 1.6rem;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+}
+
+.achievement-item p {
+  font-size: 1.3rem;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+
+@media (min-width: 768px) {
+  .about-intro {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    gap: 6rem;
+  }
+
+
+  .about-intro > div:first-child {
+    flex:1; 
+    max-width: 65rem;
+  }
+
+
+  .about-intro > div:last-child {
+    flex: 0.8;
+    display: flex;
+    justify-content: center;
+  }
+
+  .about-title {
+    font-size: 6.4rem;
+  }
+
+  .about-title span {
+    display: inline;
+  }
+
+  .card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+  }
+
+  .bottom-container {
+    grid-template-columns: 1.5fr 1fr;
+  }
+}

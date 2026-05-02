@@ -63,7 +63,7 @@ export default function Navbar() {
             </li>
           </ul>
           <div className="nav-social">
-            <a href="" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="www.linkedin.com/in/mfundo-dhlamini" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
             <a href="" target="_blank"><i class="fa-brands fa-instagram"></i></a>
           </div>
         </div>
