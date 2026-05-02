@@ -55,9 +55,8 @@ export default function About() {
               </p>
 
               <blockquote>
-                “Stay hungry. Stay foolish. Think different. The only way to do great work is to love what you do.”
-                <br />
-                <cite>— Steve Jobs</cite>
+                “Success is when reality catches up to your imagination.”
+                <cite>— Simon Sinek</cite>
               </blockquote>
             </div>
           </div>
