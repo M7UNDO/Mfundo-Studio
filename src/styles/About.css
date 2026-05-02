@@ -27,14 +27,13 @@
   object-fit: cover;
 }
 
-/* Typography & Badges */
 .about-badge {
   display: inline-block;
   padding: 0.6rem 1.4rem;
   background: rgba(127, 90, 255, 0.1);
   border: 1px solid rgba(127, 90, 255, 0.3);
   border-radius: 100px;
-  color: #7f5aff;
+  color: var(--accent-colour);
   font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 1px;
@@ -49,24 +48,22 @@
 }
 
 .about-title span {
-  color: #7f5aff;
+  color: var(--accent-colour);
   display: block;
 }
 
 .section-label {
   font-size: 1.4rem;
   text-transform: uppercase;
-  color: #7f5aff;
+  color: var(--accent-colour);
   letter-spacing: 2px;
   margin: 6rem 0 3rem;
   font-weight: 700;
 }
 
-/* Bio Section */
 .bio-text p {
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.8);
   margin-bottom: 2rem;
 }
 
@@ -75,7 +72,6 @@
   font-weight: 600;
 }
 
-/* Experience Cards */
 .experience-list {
   display: flex;
   flex-direction: column;
@@ -86,7 +82,7 @@
   background: rgba(255, 255, 255, 0.02);
   border: 1px solid rgba(255, 255, 255, 0.08);
   padding: 3rem;
-  border-radius: 24px;
+  border-radius: 1rem;
   transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
@@ -97,8 +93,6 @@
 
 .experience-card:hover {
   transform: translateY(-5px);
-  background: rgba(255, 255, 255, 0.04);
-  border-color: rgba(255, 255, 255, 0.2);
 }
 
 .card-header {
@@ -106,24 +100,24 @@
 }
 
 .card-header h3 {
-  font-size: 2.2rem;
+  font-size: 1.8rem;
+  font-weight: 400;
   margin-bottom: 0.5rem;
 }
 
 .card-header .date {
   font-size: 1.3rem;
-  color: #7f5aff;
   font-weight: 600;
 }
 
 .experience-card h4 {
   font-size: 1.6rem;
-  color: rgba(255, 255, 255, 0.6);
   margin-bottom: 1.5rem;
+  color: var(--accent-colour);
 }
 
 .experience-card p {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.7);
 }
@@ -177,7 +171,6 @@
   color: rgba(255, 255, 255, 0.5);
 }
 
-
 @media (min-width: 768px) {
   .about-intro {
     flex-direction: row;
@@ -186,12 +179,10 @@
     gap: 6rem;
   }
 
-
   .about-intro > div:first-child {
-    flex:1; 
+    flex: 1;
     max-width: 65rem;
   }
-
 
   .about-intro > div:last-child {
     flex: 0.8;

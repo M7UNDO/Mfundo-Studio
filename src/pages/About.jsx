@@ -38,11 +38,11 @@ export default function About() {
 
             <div className="bio-text">
               <p>
-                I'm an Honors Digital Arts student specialising in <strong>Game Design</strong> and{" "}
-                <strong>Interactive Media</strong>, with hands-on experience in front-end development,{" "}
-                <strong>UI/UX Design</strong>, and building brand-driven digital solutions.I enjoy working at the
-                intersection of design and technology, where visuals, interaction, and code come together to create
-                experiences that feel intuitive, intentional, and engaging.
+                I'm an Honors Digital Arts student specialising in <strong>Game Design</strong> and
+                <strong>Interactive Media</strong>, with hands-on experience in {""}
+                <strong>Front-end development, UI/UX Design</strong>, and building brand-driven digital solutions.I
+                enjoy working at the intersection of design and technology, where visuals, interaction, and code come
+                together to create experiences that feel intuitive, intentional, and engaging.
               </p>
 
               <p>
@@ -53,7 +53,9 @@ export default function About() {
 
               <blockquote>
                 Stay hungry. Stay foolish. Think different. The only way to do great work is to love what you do.
-                <br/><br/><cite>~ Steve Jobs</cite>
+                <br />
+                <br />
+                <cite>~ Steve Jobs</cite>
               </blockquote>
             </div>
           </div>
@@ -62,60 +64,60 @@ export default function About() {
           </div>
         </div>
 
-        {/* --- EXPERIENCE SECTION --- */}
         <div className="experience-grid">
           <h2 className="section-label">Professional Experience</h2>
 
-          <div className="experience-card active">
-            <div className="card-header">
-              <h3>Ngengebule Attorneys Inc</h3>
-              <span className="date">Dec 2025 - Present</span>
+          <div className="experience-list">
+            <div className="experience-card active">
+              <div className="card-header">
+                <h3>Ngengebule Attorneys Inc</h3>
+                <span className="date">Dec 2025 - Present</span>
+              </div>
+              <h4>Front-End Web Developer / UI/UX Designer (Freelance)</h4>
+              <p>
+                Developed responsive, SEO-optimized web solutions and brand-aligned assets for professional legal
+                services.
+              </p>
             </div>
-            <h4>Front-End Web Developer / Graphic Designer</h4>
-            <p>
-              Developed responsive, SEO-optimized web solutions and brand-aligned assets for professional legal
-              services.
-            </p>
-          </div>
 
-          <div className="experience-card active">
-            <div className="card-header">
-              <h3>Lesakhi Investments</h3>
-              <span className="date">Jan 2026 - Present</span>
+            <div className="experience-card active">
+              <div className="card-header">
+                <h3>Lesakhi Investments</h3>
+                <span className="date">Jan 2026 - Present</span>
+              </div>
+              <h4>Front-End Web Developer / Graphic Designer (Freelance)</h4>
+              <p>
+                Crafting full-spectrum brand identity from logo design to responsive web development and audience
+                engagement.
+              </p>
             </div>
-            <h4>Front-End Web Developer / Graphic Designer</h4>
-            <p>
-              Crafting full-spectrum brand identity from logo design to responsive web development and audience
-              engagement.
-            </p>
-          </div>
 
-          <div className="experience-card">
-            <div className="card-header">
-              <h3>Rahul Solutions</h3>
-              <span className="date">2023 - 2025</span>
+            <div className="experience-card">
+              <div className="card-header">
+                <h3>Rahul Solutions</h3>
+                <span className="date">2023 - 2025</span>
+              </div>
+              <h4>Developer / Designer / 3D Modeler (Freelance)</h4>
+              <p>
+                Integrated 3D modeling with web development to establish cohesive digital identities and professional
+                presentation.
+              </p>
             </div>
-            <h4>Developer / Designer / 3D Modeler</h4>
-            <p>
-              Integrated 3D modeling with web development to establish cohesive digital identities and professional
-              presentation.
-            </p>
-          </div>
 
-          <div className="experience-card">
-            <div className="card-header">
-              <h3>L&D Academy</h3>
-              <span className="date">2023 - 2024</span>
+            <div className="experience-card">
+              <div className="card-header">
+                <h3>L&D Academy</h3>
+                <span className="date">2023 - 2024</span>
+              </div>
+              <h4>Graphic Designer (Freelance)</h4>
+              <p>
+                Built visual identities from the ground up, ensuring brand mission and values resonated with target
+                audiences.
+              </p>
             </div>
-            <h4>Graphic Designer</h4>
-            <p>
-              Built visual identities from the ground up, ensuring brand mission and values resonated with target
-              audiences.
-            </p>
           </div>
         </div>
 
-        {/* --- EDUCATION & SKILLS SECTION --- */}
         <div className="bottom-grid">
           <div className="skills-column">
             <h2 className="section-label">Technical Stack</h2>
@@ -134,8 +136,20 @@ export default function About() {
               <p>Current Education: University of the Witwatersrand</p>
             </div>
             <div className="achievement-item">
-              <strong>Vega School Trophy</strong>
-              <p>Flair in Design (2022)</p>
+              <strong>6x Wits Certificate of First Class</strong>
+              <p>University of the Witwatersrand</p>
+            </div>
+            <div className="achievement-item">
+              <strong>Golden Key Honor Society</strong>
+              <p>Golden Key: Wits University (2024)</p>
+            </div>
+            <div className="achievement-item">
+              <strong>Vega School Design Trophy</strong>
+              <p>Vega School Trophy for Flair in Design (2022)</p>
+            </div>
+            <div className="achievement-item">
+              <strong>Top Design Student</strong>
+              <p>Krugersdorp High (2022)</p>
             </div>
             <div className="achievement-item">
               <strong>Matric Top 20</strong>
