@@ -38,24 +38,26 @@ export default function About() {
 
             <div className="bio-text">
               <p>
-                I'm an Honors Digital Arts student specialising in <strong>Game Design</strong> and{""}
-                 <strong>Interactive Media</strong>, with hands-on experience in {""}
-                <strong>Front-end development, UI/UX Design</strong>, and building brand-driven digital solutions.I
-                enjoy working at the intersection of design and technology, where visuals, interaction, and code come
+                I'm an Honours Digital Arts student specialising in <strong>Game Design</strong> and{" "}
+                <strong>Interactive Media</strong>, with hands-on experience in <strong>front-end development</strong>,{" "}
+                <strong>UI/UX design</strong>, and building brand-driven digital solutions.
+              </p>
+
+              <p>
+                I enjoy working at the intersection of design and technology, where visuals, interaction, and code come
                 together to create experiences that feel intuitive, intentional, and engaging.
               </p>
 
               <p>
-                My background in game design shapes how I approach everything: I think in systems, flows, and user
-                journeys. Every interaction matters.Beyond the technical side, I enjoy solving problems creatively,
-                collaborating with others, and constantly refining my craft.
+                My background in game design shapes how I approach everything. I think in systems, flows, and user
+                journeys, understanding that every interaction matters. Beyond the technical side, I enjoy solving
+                problems creatively, collaborating with others, and continuously refining my craft.
               </p>
 
               <blockquote>
-                Stay hungry. Stay foolish. Think different. The only way to do great work is to love what you do.
+                “Stay hungry. Stay foolish. Think different. The only way to do great work is to love what you do.”
                 <br />
-                <br />
-                <cite>~ Steve Jobs</cite>
+                <cite>— Steve Jobs</cite>
               </blockquote>
             </div>
           </div>
