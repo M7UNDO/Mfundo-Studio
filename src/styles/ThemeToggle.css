@@ -21,6 +21,8 @@
 
 .theme-btn:hover{
     transform: translateY(-4px);
+    box-shadow: 0 1rem 3rem #7e5aff0e, 0 0.2rem 0.8rem #9173ff72;
+    
     background-color: var(--accent-colour);
     color: white;
 }
