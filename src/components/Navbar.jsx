@@ -3,6 +3,7 @@ import {NavLink, Link, useLocation} from "react-router-dom";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
+import ThemeToggle from "./ThemeToggle";
 import "../styles/Navbar.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -88,6 +89,7 @@ export default function Navbar() {
               <i className="fa-brands fa-instagram"></i>
             </a>
           </div>
+          <ThemeToggle />
         </div>
 
         <button onClick={() => setMenuOpen(!menuOpen)} className={`menu-btn ${menuOpen ? "menu-open" : ""}`}>
