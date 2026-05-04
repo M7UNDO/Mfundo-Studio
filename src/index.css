@@ -1,44 +1,85 @@
-:root{
+:root {
+  /* Brand Colours */
   --accent-colour: #7f5aff;
   --accent-colour-hover: #346bd9;
-  --background-colour:  rgb(13, 13, 13);
-  --primary-colour: rgb(230, 226, 236);;
-  --typography-colour: rgb(230, 226, 236);
-  
+
+  /* Typography */
   --primary-font: "Roboto", sans-serif;
   --secondary-font: "Manrope", sans-serif;
+
+  /* Default Theme: Dark */
+  --background-colour: rgb(13, 13, 13);
+  --background-colour-light: rgb(41, 39, 52);
+  --primary-colour: rgb(255, 255, 255);
+  --primary-transparent: rgba(255, 255, 255, 0.4);
+  --typography-colour: rgb(230, 226, 236);
+
+  --form-bg: rgba(255, 255, 255, 0.03);
+  --form-border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(0, 0, 0, 0.2);
+  --label-colour: rgba(255, 255, 255, 0.5);
+  --normal-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.04);
+  --hard-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
 }
 
-html{
+[data-theme="light"] {
+  --background-colour: rgb(235, 235, 237);
+  --background-colour-light: rgb(255, 255, 255);
+  --primary-colour: rgb(0, 0, 0);
+  --primary-transparent: rgba(0, 0, 0, 0.4);
+  --typography-colour: rgb(40, 40, 40);
+
+  --form-bg: rgba(0, 0, 0, 0.02);
+  --form-border: rgba(128, 128, 128, 0.37);
+  --input-bg: rgba(255, 255, 255, 0.8);
+  --label-colour: rgba(0, 0, 0, 0.6);
+}
+
+[data-theme="dark"] {
+  --background-colour: rgb(13, 13, 13);
+  --background-colour-light: rgb(41, 39, 52);
+  --primary-colour: rgb(230, 226, 236);
+  --primary-transparent: rgba(255, 255, 255, 0.4);
+  --typography-colour: rgb(230, 226, 236);
+
+  --form-bg: rgba(255, 255, 255, 0.03);
+  --form-border: rgba(255, 255, 255, 0.08);
+  --input-bg: rgba(0, 0, 0, 0.2);
+  --label-colour: rgba(255, 255, 255, 0.5);
+}
+
+html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-*{
+*,
+*::before,
+*::after {
   box-sizing: border-box;
   padding: 0;
   margin: 0;
 }
 
-body{
+body {
+  min-height: 100vh;
   background-color: var(--background-colour);
   color: var(--typography-colour);
   font-family: var(--primary-font);
   font-size: 1.6rem;
+  transition:
+    background-color 0.3s ease,
+    color 0.3s ease;
 }
 
 a {
-  text-decoration: none;
   color: inherit;
+  text-decoration: none;
 }
 
-@media screen and (min-width: 600px){
-  
+button,
+input,
+textarea,
+select {
+  font: inherit;
 }
-
-@media(prefers-color-scheme: light) {
-  :root{
-
-  }
-}
-

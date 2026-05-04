@@ -3,7 +3,6 @@
   width: 100%;
   min-height: 100vh;
   padding: 10rem 2rem 5rem;
-  color: #ffffff;
   display: flex;
   justify-content: center;
 }
@@ -69,7 +68,6 @@
 }
 
 .bio-text strong {
-  color: #ffffff;
   font-weight: 600;
 }
 
@@ -120,7 +118,6 @@
 .experience-card p {
   font-size: 1.4rem;
   line-height: 1.6;
-  color: rgba(255, 255, 255, 0.7);
 }
 
 .reference-info {
@@ -150,7 +147,6 @@
   border: 1px solid rgba(127, 90, 255, 0.1);
   border-radius: 8px;
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.8);
 }
 
 .achievement-item {
@@ -163,13 +159,12 @@
 .achievement-item strong {
   display: block;
   font-size: 1.6rem;
-  color: #ffffff;
   margin-bottom: 0.4rem;
 }
 
 .achievement-item p {
   font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.5);
+  opacity: 0.7;
 }
 
 @media (min-width: 768px) {

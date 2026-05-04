@@ -1,8 +1,7 @@
-/* Container adjustments */
 .portfolio-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr; /* Two-column layout like the image */
-  gap: 80px 40px; /* Large vertical gap between rows */
+  grid-template-columns: 1fr 1fr;
+  gap: 80px 40px; 
   padding: 60px 5rem;
   margin: 0 20rem;
 }
@@ -11,13 +10,13 @@
   display: flex;
   flex-direction: column;
   background: transparent;
+  font-family: var(--secondary-font);
   border: none;
   padding: 0;
 }
 
-/* Image Container - The "Mockup" feel */
 .project-visual-wrapper {
-  background: #1a1a1a; /* Your dark color */
+  background: #1a1a1a;
   overflow: hidden;
   margin-bottom: 24px;
   aspect-ratio: 16 / 10;
@@ -28,7 +27,7 @@
 }
 
 .project-card:hover .project-visual-wrapper {
-  transform: scale(0.98); /* Slight inward scale on hover */
+  transform: scale(0.98); 
 }
 
 .project-card img {
@@ -37,42 +36,70 @@
   object-fit: cover;
 }
 
-/* Typography matching the reference */
+
 .project-badge {
   font-size: 10px;
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.3);
+  color: var(--typography-colour);
+  border: 1px solid var(--primary-transparent);
   padding: 6px 16px;
   border-radius: 100px;
   width: fit-content;
   margin-bottom: 16px;
 }
 
+
+.project-tags-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 16px;
+  align-items: center;
+}
+
+.tool-tag {
+  font-size: 10px;
+  font-weight: 500;
+  text-transform: uppercase;
+  color: #888; 
+  background: var(--background-colour-light);
+  padding: 4px 10px;
+  border-radius: 4px;
+  letter-spacing: 0.05em;
+}
+
+.project-badge {
+  margin-bottom: 0; 
+}
+
+
 .project-title {
-  font-family: var(--secondary-font);
-  font-size: 2.5rem; /* Large, bold titles */
+  font-size: 2.5rem; 
   font-weight: 500;
   line-height: 1.2;
   margin-bottom: 12px;
-  color: #fff;
+
 }
 
 .project-description {
   font-size: 1.6rem;
-  color: #888; /* Dimmer description */
+  font-weight: 400;
+  font-family: var(--secondary-font);
+  color: var(--typography-colour); 
   margin-bottom: 20px;
   max-width: 90%;
+  opacity: 0.8;
 }
 
 .project-link {
+  font-family: var(--secondary-font);;
   display: flex;
   gap: 1rem;
   font-weight: 600;
   font-size: 1.4rem;
-  color: #fff;
+  color: var(--typography-colour);
   text-decoration: none;
   display: flex;
   align-items: center;
@@ -82,4 +109,9 @@
 .project-link:hover{
     color: var(--accent-colour);
 
+}
+
+.game-project{
+  border-radius: 1rem;
+  background-color: red;
 }

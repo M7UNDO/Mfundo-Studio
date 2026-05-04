@@ -4,7 +4,6 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  color: #ffffff;
   padding: 2rem;
 }
 
@@ -44,13 +43,13 @@
 .hero-description {
   max-width: 600px;
   font-size: clamp(1.1rem, 2vw, 1.4rem);
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--typography-colour);
   line-height: 1.6;
   margin-bottom: 3rem;
 }
 
 .hero-description strong {
-  color: #fff;
+  color: var(--accent-colour);
 }
 
 .hero-cta {
@@ -67,8 +66,8 @@ button {
 }
 
 .primary-btn {
-  background: #fff;
-  color: #000;
+  background: var(--primary-colour);
+  color: var(--background-colour);
   border: none;
 }
 
@@ -81,8 +80,8 @@ button {
 
 .secondary-btn {
   background: transparent;
-  color: #fff;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  color: var(--primary-colour);
+  border: 1px solid var(--primary-colour);
 }
 
 .secondary-btn:hover {
@@ -94,8 +93,7 @@ button {
   bottom: -15vh;
   display: flex;
   gap: 2rem;
-  opacity: 0.4;
   font-size: 0.9rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 2px;
 }

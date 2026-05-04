@@ -13,6 +13,18 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
+  transition:
+    background-color 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+
+html[data-theme="light"] .navbar.navbar-scrolled {
+  background-color: rgb(235, 235, 237);
+}
+
+html[data-theme="dark"] .navbar.navbar-scrolled {
+  background-color: rgb(13, 13, 13);
 }
 
 .nav-menu {
@@ -21,10 +33,12 @@ header {
   position: fixed;
   top: 5rem;
   right: 0;
-  height: 100%;
-  width: 80%;
+  height: 100vh;
+  width: 100%;
   transform: translateX(100%);
   transition: all 0.3s ease;
+  background: var(--background-colour);
+  gap: 3rem;
 }
 
 .nav-menu.active {
@@ -40,8 +54,10 @@ header {
 }
 
 .navlinks li {
+  font-family: var(--secondary-font);
   width: 100%;
-  padding: 1rem;
+  padding: 1rem 2.5rem;
+  border-bottom: 0.5px solid rgba(128, 128, 128, 0.25);
 }
 
 .navlinks li a {
@@ -106,11 +122,15 @@ header {
 }
 
 @media screen and (min-width: 768px) {
+  .navbar {
+    height: 6rem;
+  }
   .menu-btn {
     display: none;
   }
 
   .nav-menu {
+    height: 100vh;
     display: flex;
     flex-direction: row;
     gap: 2rem;
@@ -119,30 +139,39 @@ header {
     width: fit-content;
     height: 100%;
     transform: translateX(0);
-    background: none;
+    background: transparent;
   }
 
   .navlinks {
+    height: 100%;
     flex-direction: row;
+    align-items: center;
   }
 
   .navlinks li {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    font-family: var(--primary-font);
     font-size: 1.4rem;
     width: fit-content;
     border: none;
     background: none;
-    padding: 1rem 0.5rem;
+    padding: 0 0.5rem;
   }
 
   .navlinks li a {
     position: relative;
+    height: 100%;
+    display: flex;
+    align-items: center;
   }
 
   .navlinks a::after {
     content: "";
     position: absolute;
     left: 0;
-    bottom: -1rem;
+    bottom: 0;
     width: 100%;
     height: 0.3rem;
     background-color: var(--primary-colour);
@@ -160,7 +189,7 @@ header {
     transform: scaleX(1);
   }
 
-  .nav-social{
+  .nav-social {
     font-size: 1.8rem;
     display: flex;
     flex-direction: row;
@@ -169,11 +198,11 @@ header {
     padding: 0 2rem;
   }
 
-  .nav-social a{
+  .nav-social a {
     transition: all 0.2s ease;
   }
 
-  .nav-social a:hover{
+  .nav-social a:hover {
     transform: scale(1.1);
     color: var(--accent-colour);
   }
