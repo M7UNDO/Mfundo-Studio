@@ -1,8 +1,8 @@
-import { useState, useEffect, useRef } from "react";
-import { NavLink, Link, useLocation } from "react-router-dom";
-import { gsap } from "gsap";
-import { useGSAP } from "@gsap/react";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import {useState, useEffect, useRef} from "react";
+import {NavLink, Link, useLocation} from "react-router-dom";
+import {gsap} from "gsap";
+import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import "../styles/Navbar.css";
 
 gsap.registerPlugin(useGSAP, ScrollTrigger);
@@ -17,25 +17,32 @@ export default function Navbar() {
   }, [location]);
 
   useEffect(() => {
-    document.body.style.overflow = menuOpen ? "hidden" : "unset";
+    if (menuOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "unset";
+    }
 
     return () => {
       document.body.style.overflow = "unset";
     };
   }, [menuOpen]);
 
-  useGSAP(() => {
-  const trigger = ScrollTrigger.create({
-    trigger: document.documentElement,
-    start: "top 20%",
-    toggleClass: {
-      targets: container.current,
-      className: "navbar-scrolled",
-    },
-  });
+  useGSAP(
+    () => {
+      const trigger = ScrollTrigger.create({
+        trigger: document.documentElement,
+        start: "top -200px",
+        toggleClass: {
+          targets: container.current,
+          className: "navbar-scrolled",
+        },
+      });
 
-  return () => trigger.kill();
-}, { scope: container });
+      return () => trigger.kill();
+    },
+    {scope: container},
+  );
 
   function closeMenu() {
     setMenuOpen(false);
@@ -44,7 +51,7 @@ export default function Navbar() {
   return (
     <header>
       <nav className="navbar" ref={container}>
-        <Link to="/" className="Logo">
+        <Link to="/" className="logo">
           Mfundo Dhlamini
         </Link>
 

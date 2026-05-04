@@ -2,9 +2,9 @@ header {
   position: sticky;
   top: 0;
   height: 5rem;
+  width: 100%;
   z-index: 99;
-  background: transparent;
-  backdrop-filter: blur(10px);
+  background: none;
 }
 
 .navbar {
@@ -13,11 +13,9 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  transition:
-    background-color 0.25s ease,
-    box-shadow 0.25s ease;
+  background-color: var(--background-colour);
+  transition: all 0.25s ease;
 }
-
 
 html[data-theme="light"] .navbar.navbar-scrolled {
   background-color: rgb(235, 235, 237);
@@ -28,17 +26,17 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 }
 
 .nav-menu {
-  display: flex;
-  flex-direction: column;
   position: fixed;
   top: 5rem;
   right: 0;
-  height: 100vh;
+  height: 100%;
   width: 100%;
   transform: translateX(100%);
-  transition: all 0.3s ease;
+  transition: transform 0.4s ease;
   background: var(--background-colour);
-  gap: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .nav-menu.active {
@@ -68,6 +66,7 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 }
 
 .logo {
+  text-transform: uppercase;
 }
 
 .menu-btn {
@@ -124,22 +123,21 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 @media screen and (min-width: 768px) {
   .navbar {
     height: 6rem;
+    background: transparent;
+    backdrop-filter: blur(10px);
   }
   .menu-btn {
     display: none;
   }
 
   .nav-menu {
-    height: 100vh;
-    display: flex;
     flex-direction: row;
-    gap: 2rem;
+    gap: 1rem;
     align-items: center;
     position: static;
     width: fit-content;
     height: 100%;
     transform: translateX(0);
-    background: transparent;
   }
 
   .navlinks {
