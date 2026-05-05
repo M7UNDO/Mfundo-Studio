@@ -133,7 +133,6 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 @media screen and (min-width: 768px) {
   .navbar {
     height: 6rem;
-    background: transparent;
     backdrop-filter: blur(10px);
   }
   .menu-btn {
@@ -149,7 +148,6 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
     height: 100%;
     transform: translateX(0);
     padding: 0;
-    background: transparent;
   }
 
   .navlinks {

@@ -1,0 +1,18 @@
+footer{
+    height: 5rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.2rem;
+    font-family: var(--secondary-font);
+    background-color: var(--background-colour);
+    color: var(--typography-colour);
+    border-top: 1px solid var(--background-colour-light);
+}
+
+[data-theme="light"] footer{
+    border-top: 1px solid var(--primary-transparent);
+
+}
+

@@ -1,7 +1,6 @@
 import React, { useRef } from "react";
 import { gsap } from "gsap";
 import { useGSAP } from "@gsap/react";
-import MagneticDotGrid from "../components/MagneticDotGrid";
 import "../styles/Home.css";
 
 export default function Home() {
@@ -22,8 +21,7 @@ export default function Home() {
   }, { scope: container });
 
   return (
-    <main className="home-page" ref={container}>
-      {/*<MagneticDotGrid />*/}
+    <div className="home-page" ref={container}>
       
       <section className="hero-section">
         <div className="hero-content">
@@ -53,6 +51,6 @@ export default function Home() {
           <span>UI/UX</span>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

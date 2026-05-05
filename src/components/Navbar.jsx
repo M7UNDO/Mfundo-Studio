@@ -1,16 +1,10 @@
 import {useState, useEffect, useRef} from "react";
 import {NavLink, Link, useLocation} from "react-router-dom";
-import {gsap} from "gsap";
-import {useGSAP} from "@gsap/react";
-import {ScrollTrigger} from "gsap/ScrollTrigger";
 import ThemeToggle from "./ThemeToggle";
 import "../styles/Navbar.css";
 
-gsap.registerPlugin(useGSAP, ScrollTrigger);
-
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
-  const container = useRef(null);
   const location = useLocation();
 
   useEffect(() => {
@@ -29,21 +23,6 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-  useGSAP(
-    () => {
-      const trigger = ScrollTrigger.create({
-        trigger: document.documentElement,
-        start: "top -150px",
-        toggleClass: {
-          targets: container.current,
-          className: "navbar-scrolled",
-        },
-      });
-
-      return () => trigger.kill();
-    },
-    {scope: container},
-  );
 
   function closeMenu() {
     setMenuOpen(false);
@@ -51,7 +30,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="navbar" ref={container}>
+      <nav className="navbar">
         <Link to="/" className="logo">
           Mfundo Dhlamini
         </Link>
@@ -66,11 +45,6 @@ export default function Navbar() {
             <li>
               <NavLink onClick={closeMenu} to="/portfolio">
                 Portfolio
-              </NavLink>
-            </li>
-            <li>
-              <NavLink onClick={closeMenu} to="/blogs">
-                Blogs
               </NavLink>
             </li>
             <li>

@@ -47,6 +47,10 @@
   gap: 2rem;
 }
 
+[data-theme="light"] #contact-form{
+  background: var(--background-colour);
+}
+
 .form-row {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -77,6 +81,8 @@
   font-family: inherit;
   transition: all 0.3s ease;
 }
+
+
 
 #contact-form .contact-input:hover {
   border-color: var(--accent-colour);
