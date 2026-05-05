@@ -107,9 +107,25 @@
   color: var(--background-colour);
 }
 
-.contact-page .primary-btn:hover{
+.contact-page .primary-btn:hover {
   background-color: var(--accent-colour);
   color: white;
+}
+
+.error-message {
+  font-size: 1.1rem;
+  color: #ff4d4f;
+}
+
+.form-status {
+  font-size: 1.2rem;
+  text-align: center;
+  color: var(--accent-colour);
+}
+
+.primary-btn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
 }
 
 @media (max-width: 600px) {
