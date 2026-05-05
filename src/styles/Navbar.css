@@ -14,7 +14,7 @@ header {
   align-items: center;
   padding: 0 1rem;
   background-color: var(--background-colour);
-  transition: all 0.25s ease;
+  transition: all 0.3s ease;
 }
 
 html[data-theme="light"] .navbar.navbar-scrolled {
@@ -149,6 +149,7 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
     height: 100%;
     transform: translateX(0);
     padding: 0;
+    background: transparent;
   }
 
   .navlinks {

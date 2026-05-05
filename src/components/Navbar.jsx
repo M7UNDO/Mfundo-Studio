@@ -33,7 +33,7 @@ export default function Navbar() {
     () => {
       const trigger = ScrollTrigger.create({
         trigger: document.documentElement,
-        start: "top -200px",
+        start: "top -150px",
         toggleClass: {
           targets: container.current,
           className: "navbar-scrolled",
