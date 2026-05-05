@@ -60,6 +60,19 @@ export default function Contact() {
     {scope: container},
   );
 
+  const handleSubmit = (event) => {
+    event.preventDefault();
+
+    const formData = new FormData(formRef.current);
+    const validationErrors = validateForm(formData);
+
+    setErrors(validationErrors);
+
+    if (Object.keys(validationErrors).length === 0) {
+      formRef.current.submit();
+    }
+  };
+
   return (
     <section className="contact-page" ref={container}>
       <div className="contact-hero">
@@ -74,7 +87,14 @@ export default function Contact() {
       </div>
 
       <div className="contact-form-wrapper">
-        <form id="contact-form">
+        <form
+          id="contact-form"
+          action="https://api.web3forms.com/submit"
+          method="POST"
+          onSubmit={handleSubmit}
+          noValidate
+        >
+          <input type="hidden" name="access_key" value="05f70f72-86b2-450a-a9d4-1992cbadb979"></input>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="first_name">First Name</label>

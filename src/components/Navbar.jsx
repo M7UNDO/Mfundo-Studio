@@ -69,6 +69,11 @@ export default function Navbar() {
               </NavLink>
             </li>
             <li>
+              <NavLink onClick={closeMenu} to="/blogs">
+                Blogs
+              </NavLink>
+            </li>
+            <li>
               <NavLink onClick={closeMenu} to="/about">
                 About
               </NavLink>
