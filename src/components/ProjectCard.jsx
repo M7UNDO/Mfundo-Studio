@@ -1,15 +1,6 @@
-import { Link } from "react-router-dom";
+import {Link} from "react-router-dom";
 
-export default function ProjectCard({
-  id,
-  src,
-  title,
-  category,
-  description,
-  liveLink,
-  githubLink,
-  tools,
-}) {
+export default function ProjectCard({id, src, title, category, description, liveLink, githubLink, tools}) {
   return (
     <article className="project-card">
       <div className="project-visual-wrapper">
@@ -31,18 +22,20 @@ export default function ProjectCard({
 
       <div className="project-links">
         {liveLink && (
-          <a href={liveLink} target="_blank" rel="noreferrer" className="live-link">
-            Live Site
+          <a href={liveLink} target="_blank" rel="noreferrer" className="project-link live-link">
+            Live Website
+            <span className="material-symbols-outlined">open_in_new</span>
           </a>
         )}
 
         {githubLink && (
-          <a href={githubLink} target="_blank" rel="noreferrer" className="github-link">
+          <a href={githubLink} target="_blank" rel="noreferrer" className="project-link github-link">
             GitHub
+            <span className="material-symbols-outlined">open_in_new</span>
           </a>
         )}
 
-        <Link to={`/portfolio/${id}`} className="project-link">
+        <Link to={`/portfolio/${id}`} className="project-link case-study-link">
           View Case Study
           <span className="material-symbols-outlined">arrow_forward</span>
         </Link>

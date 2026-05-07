@@ -57,7 +57,8 @@
   gap: 1.5rem;
 }
 
-button {
+.primary-btn,
+.secondary-btn {
   padding: 1rem 2.5rem;
   border-radius: 8px;
   font-weight: 600;
@@ -75,7 +76,9 @@ button {
   background: #7f5aff;
   color: #fff;
   transform: translateY(-3px);
-  box-shadow: 0 10px 20px rgba(127, 90, 255, 0.3);
+  box-shadow:
+    0 1rem 3rem rgba(127, 90, 255, 0.3),
+    0 0.2rem 1rem rgba(153, 124, 255, 0.3);
 }
 
 .secondary-btn {
@@ -86,6 +89,10 @@ button {
 
 .secondary-btn:hover {
   background: rgba(255, 255, 255, 0.05);
+  color: var(--accent-colour);
+  border: 1px solid var(--accent-colour);
+  box-shadow: 0 10px 20px rgba(127, 90, 255, 0.2);
+  transform: translateY(-3px);
 }
 
 .hero-skills-footer {

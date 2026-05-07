@@ -67,7 +67,29 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 }
 
 .logo {
-  text-transform: uppercase;
+  font-size: 1.4rem;
+  font-family: var(--secondary-font);
+}
+
+.logo:hover{
+  color: var(--accent-colour);
+}
+
+.logo {
+  height: 100%;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+.logo img {
+  padding: 0.8rem;
+  height: 100%;
+  width: auto;
+}
+
+.logo:hover img{
+  fill: var(--accent-colour);
 }
 
 .menu-btn {
@@ -148,6 +170,7 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
     height: 100%;
     transform: translateX(0);
     padding: 0;
+    background: transparent;
   }
 
   .navlinks {

@@ -6,6 +6,8 @@ import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
 import Portfolio from "./pages/Portfolio";
 import AbsaCaseStudy from "./pages/AbsaCaseStudy";
+import LnaCaseStudy from "./pages/LnaCaseStudy";
+import NorthstarCaseStudy from "./pages/NorthstarCaseStudy";
 import About from "./pages/About";
 import Contact from "./pages/Contact";
 import NotFound from "./pages/NotFound";
@@ -34,6 +36,8 @@ function App() {
               <Route path="/" element={<Home />} />
               <Route path="/portfolio" element={<Portfolio />} />
               <Route path="/portfolio/absa-nextgen-wealth-studio" element={<AbsaCaseStudy />} />
+              <Route path="/portfolio/ngengebule-attorneys" element={<LnaCaseStudy />} />
+              <Route path="/portfolio/northstar-shop" element={<NorthstarCaseStudy />} />
               <Route path="/about" element={<About />} />
               <Route path="/contact" element={<Contact />} />
             </Route>

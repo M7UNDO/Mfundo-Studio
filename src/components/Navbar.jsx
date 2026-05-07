@@ -1,11 +1,15 @@
-import {useState, useEffect, useRef} from "react";
+import {useState, useEffect, useRef, useContext} from "react";
 import {NavLink, Link, useLocation} from "react-router-dom";
+import ThemeContext from "../context/ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import "../styles/Navbar.css";
+import logoBlack from "../assets/logos/Northstar Studios_Black.svg";
+import logoWhite from "../assets/logos/Northstar Studios_White.svg";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
   const location = useLocation();
+  const {theme} = useContext(ThemeContext);
 
   useEffect(() => {
     setMenuOpen(false);
@@ -32,6 +36,7 @@ export default function Navbar() {
     <header>
       <nav className="navbar">
         <Link to="/" className="logo">
+          <img src={theme === "light"? logoBlack: logoWhite} alt="" />
           Mfundo Dhlamini
         </Link>
 

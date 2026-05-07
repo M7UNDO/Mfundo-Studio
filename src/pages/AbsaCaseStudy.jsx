@@ -1,10 +1,16 @@
 // src/pages/AbsaCaseStudy.jsx
 
+import {useState} from "react";
 import {Link} from "react-router-dom";
 import "../styles/AbsaCaseStudy.css";
 
+import ImageLightbox from "../components/ImageLightbox";
 import coverImage from "../assets/images/absa/cover.png";
+import informationArchitecture from "../assets/images/absa/ABSA-sitemap.png";
+import absaPallete from "../assets/images/absa/absa-palette.png";
 import moneySnapshot from "../assets/images/absa/moneysnapshot.jpg";
+import loginPage from "../assets/images/absa/login.png";
+import signUpPage from "../assets/images/absa/signup.png";
 import simulationStudio from "../assets/images/absa/simulationlabs.jpg";
 import strategyTracks from "../assets/images/absa/strategytracks.jpg";
 import bnplStudio from "../assets/images/absa/bnpl.jpg";
@@ -12,8 +18,21 @@ import homeLoanStudio from "../assets/images/absa/homeloancalculator.jpg";
 import vehicleStudio from "../assets/images/absa/vehiclefinance.jpg";
 
 export default function AbsaCaseStudy() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  function openLightbox(src, alt, caption) {
+    setSelectedImage({
+      src,
+      alt,
+      caption,
+    });
+  }
+
+  function closeLightbox() {
+    setSelectedImage(null);
+  }
   return (
-    <main className="absa-case-study">
+    <section className="absa-case-study">
       <section className="absa-hero">
         <Link to="/portfolio" className="back-link">
           ← Back to Portfolio
@@ -21,7 +40,7 @@ export default function AbsaCaseStudy() {
 
         <p className="case-label">UX/UI Design · React MVP · Financial Web App</p>
 
-        <h1>ABSA NextGen Wealth Studio – First Five Years</h1>
+        <h1>ABSA NextGen Wealth Studio - First Five Years</h1>
 
         <p className="hero-summary">
           A responsive financial planning web application prototype designed to help young South African professionals
@@ -64,12 +83,14 @@ export default function AbsaCaseStudy() {
         <div className="section-content">
           <p>
             Absa Next Gen Wealth Studio is a digital companion web app crafted for high-earning South African young
-            professionals (ages 23-35, earning R30k-R70k per month) who are overwhelmed by early complex financial
-            decisions with long-term consequences. It simplifies financial understanding by making complex information
-            more digestible and assists in developing a personalised five-year wealth-building strategy that enables
-            users to simulate key decisions. This document outlines the vision, scope, requirements and guidelines for a
-            pilot MVP build. Its purpose is to secure approval for the prototype and a subsequent full featured React
-            web application.
+            professionals between the ages of 23 and 35, earning between R30,000 and R70,000 per month, who are
+            overwhelmed by early complex financial decisions with long-term consequences.
+          </p>
+
+          <p>
+            The product simplifies financial understanding by making complex information more digestible and assists
+            users in developing a personalised five-year wealth-building strategy. It allows users to simulate key
+            financial decisions before committing to them.
           </p>
         </div>
       </section>
@@ -82,7 +103,7 @@ export default function AbsaCaseStudy() {
 
         <div className="section-content">
           <blockquote>
-            “I earn well, but I don’t have a good plan. Every financial decision feels like a permanent, scary choice.”
+            “I earn well, but I don't have a good plan. Every financial decision feels like a permanent, scary choice.”
           </blockquote>
 
           <p>
@@ -93,10 +114,9 @@ export default function AbsaCaseStudy() {
 
           <h3>ABSA's Perspective</h3>
           <p>
-            We are losing the next generation of high-earning clients to neo-banks (TymeBank, Discovery Bank) and
-            fintech platforms (Easy Equities, Stash) by the time they turn 30, and our current digital tools are
-            transactional, not transformational. We need to create a product that builds deep, long-term relationships
-            by providing genuine financial guidance during the critical period when lifelong banking habbits are formed.
+            Absa is losing the next generation of high-earning clients to neo-banks and fintech platforms. The challenge
+            was to move beyond transactional banking and create a product that builds long-term trust through genuine
+            financial guidance during the years when lifelong banking habits are formed.
           </p>
         </div>
       </section>
@@ -106,42 +126,77 @@ export default function AbsaCaseStudy() {
         <h2>User Personas & Key Insights</h2>
 
         <p className="section-intro">
-          The PRD defined three personas that helped shape the product’s structure, features, and tone.
+          The PRD defined three target personas. Each persona represents a different relationship with money: the new
+          earner, the cautious high saver, and the ambitious professional balancing debt, lifestyle, and property goals.
         </p>
 
         <div className="persona-grid">
           <article>
             <h3>Vuyo Ndlovu</h3>
-            <p className="persona-role">24 · Junior Software Developer · Cape Town</p>
+            <p className="persona-role">24 · Junior Software Developer · Cape Town CBD · R32,000 gross p/m</p>
+
+            <strong>Financial Snapshot</strong>
             <p>
-              Vuyo earns R32,000 gross per month and is navigating his first real job, student debt, family support, and
-              lifestyle pressure.
+              NSFAS debt, a small credit card balance, limited savings, and monthly expenses that include rent,
+              transport, lifestyle spending, and supporting family.
             </p>
-            <strong>Design need:</strong>
-            <p>Make tax, deductions, budgeting, and saving feel understandable for first-time professionals.</p>
+
+            <strong>Lifestyle & Aspirations</strong>
+            <p>
+              Proud of landing his first real job and wants to enjoy the lifestyle that comes with it, while hoping to
+              travel overseas within the next few years.
+            </p>
+
+            <strong>Financial Mistakes</strong>
+            <p>
+              Overspent early salaries on lifestyle purchases and struggles to understand taxes, PAYE deductions, and
+              budgeting.
+            </p>
           </article>
 
           <article>
             <h3>Kiara Singh</h3>
-            <p className="persona-role">31 · Management Consultant · Sandton</p>
+            <p className="persona-role">31 · Management Consultant · Midrand / Sandton · R70,000 gross p/m</p>
+
+            <strong>Financial Snapshot</strong>
             <p>
-              Kiara earns R70,000 gross per month and has strong savings, but struggles with analysis paralysis around
-              investing, retirement, and offshore options.
+              Debt-free with strong monthly savings and a large cash reserve, but no formal investments despite earning
+              well.
             </p>
-            <strong>Design need:</strong>
-            <p>Help confident users move from passive saving to active planning.</p>
+
+            <strong>Lifestyle & Aspirations</strong>
+            <p>
+              Wants financial independence, potential international mobility, and exposure to global investments while
+              maintaining flexibility in her lifestyle and career.
+            </p>
+
+            <strong>Financial Mistakes</strong>
+            <p>
+              Experiences analysis paralysis and keeps most of her wealth in cash due to fear of making the wrong
+              investment decision.
+            </p>
           </article>
 
           <article>
             <h3>Thabo Motlabi</h3>
-            <p className="persona-role">28 · Data Scientist · Johannesburg</p>
+            <p className="persona-role">28 · Data Scientist · Sandton, Johannesburg · R55,000 gross p/m</p>
+
+            <strong>Financial Snapshot</strong>
             <p>
-              Thabo earns R55,000 gross per month but feels trapped by vehicle finance, rent, student loans, and the
-              goal of buying property.
+              Balances vehicle finance, student loans, rent, and lifestyle expenses while trying to build savings and
+              long-term investments.
             </p>
-            <strong>Design need:</strong>
+
+            <strong>Lifestyle & Aspirations</strong>
             <p>
-              Help users compare big financial trade-offs such as cars, property, retirement, and lifestyle spending.
+              Wants to buy property within the next few years and begin offshore investing, but feels pressure to
+              maintain an expensive lifestyle.
+            </p>
+
+            <strong>Financial Mistakes</strong>
+            <p>
+              Feels trapped by a long-term vehicle finance deal and is overwhelmed by balancing retirement planning,
+              property goals, and debt reduction.
             </p>
           </article>
         </div>
@@ -158,28 +213,31 @@ export default function AbsaCaseStudy() {
             <h3>Money Snapshot</h3>
             <p>
               A dashboard that shows income, PAYE, net income, fixed costs, disposable cash, budgets, savings goals,
-              assets, and liabilities.
+              assets, liabilities, and milestone progress.
             </p>
           </article>
 
           <article>
             <h3>Strategy Tracks</h3>
             <p>
-              Guided five-year plans that support different goals such as property ownership, financial flexibility, and
-              long-term wealth building.
+              Guided five-year plans that support goals such as property ownership, financial flexibility, long-term
+              wealth building, and legacy planning.
             </p>
           </article>
 
           <article>
             <h3>Simulation Studio</h3>
-            <p>Interactive calculators that help users explore trade-offs before making major financial decisions.</p>
+            <p>
+              Interactive calculators that help users explore trade-offs before making major decisions around vehicles,
+              property, and buying behaviour.
+            </p>
           </article>
 
           <article>
-            <h3>Explainery Layer</h3>
+            <h3>Content & Explainery Layer</h3>
             <p>
-              Tooltips, cards, sidebars, and glossary content that explain concepts like PAYE, TFSA, RA, emergency
-              funds, and balloon payments.
+              Tooltips, educational cards, studio sidebars, and glossary content that explain terms such as PAYE, TFSA,
+              RA, emergency funds, balloon payments, and BNPL fees.
             </p>
           </article>
         </div>
@@ -193,15 +251,39 @@ export default function AbsaCaseStudy() {
 
         <div className="section-content">
           <p>
-            The user journey was structured around a clear progression: log in, understand the current financial
-            picture, choose a strategy, and use simulations to test major decisions.
+            The user journey was structured around a clear progression: sign up or log in, understand the current
+            financial picture, choose a strategy, and use simulations to test major financial decisions.
           </p>
 
           <p>
-            This created a product flow that moved users from awareness to action. The Money Snapshot gave users a
-            starting point, Strategy Tracks provided direction, and the Simulation Studio helped users explore
-            trade-offs.
+            This created a product flow that moved users from awareness to action. The Money Snapshot acts as the
+            post-login landing page, Strategy Tracks provide long-term direction, and the Simulation Studio supports
+            decision-making through calculators and verdicts.
           </p>
+
+          <figure className="wireframe-figure">
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  informationArchitecture,
+                  "Information architecture sitemap for ABSA NextGen Wealth Studio",
+                  "Figure 1: Information architecture diagram showing the flow from Login / Sign Up to Money Snapshot, Strategy Tracks, Simulation Labs, individual strategy paths, and calculator studios.",
+                )
+              }
+            >
+              <img
+                src={informationArchitecture}
+                alt="Information architecture sitemap for ABSA NextGen Wealth Studio"
+              />
+            </button>
+
+            <figcaption>
+              Figure 1: Information architecture diagram showing the flow from Login / Sign Up to Money Snapshot,
+              Strategy Tracks, Simulation Labs, individual strategy paths, and calculator studios.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -210,7 +292,7 @@ export default function AbsaCaseStudy() {
         <h2>Five-Year Strategy Tracks</h2>
 
         <p className="section-intro">
-          Strategy Tracks were designed to make long-term planning feel guided and personal, instead of abstract.
+          Strategy Tracks were designed to make long-term planning feel guided and personal instead of abstract.
         </p>
 
         <div className="track-grid">
@@ -218,15 +300,15 @@ export default function AbsaCaseStudy() {
             <h3>Legacy & Impact Path</h3>
             <p>
               Built for users focused on generational wealth, family responsibilities, insurance, wills, trusts,
-              education savings, and long-term impact.
+              education savings, sustainable giving, and long-term impact.
             </p>
           </article>
 
           <article>
             <h3>Freedom & Flexibility Path</h3>
             <p>
-              Built for users who value mobility, career agility, liquid investments, low debt, and the option to travel
-              or work internationally.
+              Built for users who value mobility, career agility, liquid investments, low debt, travel, and the option
+              to work internationally.
             </p>
           </article>
 
@@ -253,8 +335,8 @@ export default function AbsaCaseStudy() {
           </p>
 
           <ul>
-            <li>Year 1: Build an emergency fund and check credit score.</li>
-            <li>Years 2–3: Save aggressively toward a property deposit.</li>
+            <li>Year 1: Save an emergency fund and check credit score.</li>
+            <li>Years 2-3: Save aggressively toward a property deposit.</li>
             <li>Year 4: Reach a 10% deposit target.</li>
             <li>Year 5: Build equity through consistent bond payments.</li>
           </ul>
@@ -348,6 +430,13 @@ export default function AbsaCaseStudy() {
             with red for primary actions, orange for nudges and warnings, soft almond accents, and blue for key
             financial information.
           </p>
+
+          <figure className="wireframe-figure">
+            <img src={absaPallete} alt="ABSA NextGen Wealth Studio colour palette" />
+            <figcaption>
+              Figure 2: Visual direction and colour palette using Flag Red, Dark Orange, Almond Silk, and Royal Azure.
+            </figcaption>
+          </figure>
         </div>
       </section>
 
@@ -363,35 +452,149 @@ export default function AbsaCaseStudy() {
 
         <div className="wireframe-showcase">
           <figure className="wireframe-figure">
-            <img src={moneySnapshot} alt="Desktop wireframe of the Money Snapshot page" />
-            <figcaption>Figure 1: High fidelity desktop wireframe of the Money Snapshot page.</figcaption>
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  signUpPage,
+                  "High fidelity desktop wireframe of the Sign Up page",
+                  "Figure 3: High fidelity desktop wireframe of the Sign Up page.",
+                )
+              }
+            >
+              <img src={signUpPage} alt="High fidelity desktop wireframe of the Sign Up page" />
+            </button>
+
+            <figcaption>Figure 3: High fidelity desktop wireframe of the Sign Up page.</figcaption>
           </figure>
 
           <figure className="wireframe-figure">
-            <img src={simulationStudio} alt="Desktop wireframe of the Simulation Lab page" />
-            <figcaption>Figure 2: High fidelity desktop wireframe of the Simulation Lab overview page.</figcaption>
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  loginPage,
+                  "High fidelity desktop wireframe of the Login page",
+                  "Figure 4: High fidelity desktop wireframe of the Login page.",
+                )
+              }
+            >
+              <img src={loginPage} alt="High fidelity desktop wireframe of the Login page" />
+            </button>
+
+            <figcaption>Figure 4: High fidelity desktop wireframe of the Login page.</figcaption>
           </figure>
 
           <figure className="wireframe-figure">
-            <img src={strategyTracks} alt="Desktop wireframe of the Strategy Tracks page" />
-            <figcaption>Figure 3: High fidelity desktop wireframe of the Strategy Tracks page.</figcaption>
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  moneySnapshot,
+                  "Desktop wireframe of the Money Snapshot page",
+                  "Figure 5: High fidelity desktop wireframe of the Money Snapshot page.",
+                )
+              }
+            >
+              <img src={moneySnapshot} alt="Desktop wireframe of the Money Snapshot page" />
+            </button>
+
+            <figcaption>Figure 5: High fidelity desktop wireframe of the Money Snapshot page.</figcaption>
           </figure>
 
           <figure className="wireframe-figure">
-            <img src={bnplStudio} alt="Desktop wireframe of the BNPL vs Save First studio" />
-            <figcaption>Figure 4: High fidelity desktop wireframe of the BNPL vs Save First Studio.</figcaption>
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  simulationStudio,
+                  "Desktop wireframe of the Simulation Lab page",
+                  "Figure 6: High fidelity desktop wireframe of the Simulation Lab overview page.",
+                )
+              }
+            >
+              <img src={simulationStudio} alt="Desktop wireframe of the Simulation Lab page" />
+            </button>
+
+            <figcaption>Figure 6: High fidelity desktop wireframe of the Simulation Lab overview page.</figcaption>
           </figure>
 
           <figure className="wireframe-figure">
-            <img src={homeLoanStudio} alt="Desktop wireframe of the Home Loan Affordability Calculator" />
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  strategyTracks,
+                  "Desktop wireframe of the Strategy Tracks page",
+                  "Figure 7: High fidelity desktop wireframe of the Strategy Tracks page.",
+                )
+              }
+            >
+              <img src={strategyTracks} alt="Desktop wireframe of the Strategy Tracks page" />
+            </button>
+
+            <figcaption>Figure 7: High fidelity desktop wireframe of the Strategy Tracks page.</figcaption>
+          </figure>
+
+          <figure className="wireframe-figure">
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  bnplStudio,
+                  "Desktop wireframe of the BNPL vs Save First studio",
+                  "Figure 8: High fidelity desktop wireframe of the BNPL vs Save First Studio.",
+                )
+              }
+            >
+              <img src={bnplStudio} alt="Desktop wireframe of the BNPL vs Save First studio" />
+            </button>
+
+            <figcaption>Figure 8: High fidelity desktop wireframe of the BNPL vs Save First Studio.</figcaption>
+          </figure>
+
+          <figure className="wireframe-figure">
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  homeLoanStudio,
+                  "Desktop wireframe of the Home Loan Affordability Calculator",
+                  "Figure 9: High fidelity desktop wireframe of the Home Loan Affordability Calculator.",
+                )
+              }
+            >
+              <img src={homeLoanStudio} alt="Desktop wireframe of the Home Loan Affordability Calculator" />
+            </button>
+
             <figcaption>
-              Figure 5: High fidelity desktop wireframe of the Home Loan Affordability Calculator.
+              Figure 9: High fidelity desktop wireframe of the Home Loan Affordability Calculator.
             </figcaption>
           </figure>
 
           <figure className="wireframe-figure">
-            <img src={vehicleStudio} alt="Desktop wireframe of the Vehicle Finance Calculator" />
-            <figcaption>Figure 6: High fidelity desktop wireframe of the Vehicle Finance Calculator.</figcaption>
+            <button
+              type="button"
+              className="wireframe-button"
+              onClick={() =>
+                openLightbox(
+                  vehicleStudio,
+                  "Desktop wireframe of the Vehicle Finance Calculator",
+                  "Figure 10: High fidelity desktop wireframe of the Vehicle Finance Calculator.",
+                )
+              }
+            >
+              <img src={vehicleStudio} alt="Desktop wireframe of the Vehicle Finance Calculator" />
+            </button>
+
+            <figcaption>Figure 10: High fidelity desktop wireframe of the Vehicle Finance Calculator.</figcaption>
           </figure>
         </div>
       </section>
@@ -437,16 +640,27 @@ export default function AbsaCaseStudy() {
         </p>
 
         <div className="prototype-actions">
-          <a href="#" target="_blank" rel="noreferrer" className="prototype-link">
+          <a
+            href="https://m7undo.github.io/absa-nextgen-wealth/"
+            target="_blank"
+            rel="noreferrer"
+            className="prototype-link"
+          >
             View Final Prototype
             <span className="material-symbols-outlined">arrow_forward</span>
           </a>
 
-          <a href="#" target="_blank" rel="noreferrer" className="secondary-prototype-link">
+          <a
+            href="https://github.com/M7UNDO/absa-nextgen-wealth"
+            target="_blank"
+            rel="noreferrer"
+            className="secondary-prototype-link"
+          >
             View GitHub Repository
           </a>
         </div>
       </section>
-    </main>
+      <ImageLightbox isOpen={!!selectedImage} image={selectedImage} onClose={closeLightbox} />
+    </section>
   );
 }

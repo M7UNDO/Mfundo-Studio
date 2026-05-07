@@ -1,0 +1,138 @@
+.image-lightbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.82);
+  backdrop-filter: blur(1.2rem);
+}
+
+.image-lightbox-overlay:fullscreen {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 2rem;
+
+  background: rgba(0, 0, 0, 0.95);
+}
+
+.image-lightbox-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  max-width: 95vw;
+
+  margin: 0;
+
+  cursor: default;
+}
+
+.image-lightbox-content img {
+  display: block;
+
+  width: auto;
+  height: auto;
+
+  max-width: 100%;
+  max-height: 85vh;
+
+  object-fit: contain;
+
+  background: var(--background-colour-light);
+  box-shadow: var(--hard-shadow);
+}
+
+.image-lightbox-content-zoomed {
+  width: min(120rem, 100%);
+  max-height: 90vh;
+
+  overflow-y: auto;
+}
+
+.image-lightbox-content-zoomed img {
+  width: 100%;
+  max-width: none;
+  max-height: none;
+}
+
+.image-lightbox-content figcaption {
+  margin-top: 1.4rem;
+
+  color: white;
+
+  font-family: var(--secondary-font);
+  font-size: 1.4rem;
+  line-height: 1.6;
+  text-align: center;
+}
+
+.image-lightbox-actions {
+  position: fixed;
+  top: 2rem;
+  right: 2rem;
+  z-index: 10000;
+
+  display: flex;
+  gap: 0.8rem;
+}
+
+.image-lightbox-actions button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  width: 4.4rem;
+  height: 4.4rem;
+
+  border: 0.1rem solid rgba(255, 255, 255, 0.15);
+  border-radius: 50%;
+
+  background: rgba(255, 255, 255, 0.08);
+
+  color: white;
+  cursor: pointer;
+
+  transition:
+    background-color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.image-lightbox-actions button:hover {
+  background: rgba(255, 255, 255, 0.18);
+  transform: scale(1.05);
+}
+
+.image-lightbox-actions .material-symbols-outlined {
+  font-size: 2rem;
+}
+
+.wireframe-button {
+  display: block;
+  width: 100%;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 768px) {
+  .image-lightbox-overlay {
+    padding: 1.6rem;
+  }
+
+  .image-lightbox-content {
+    max-width: 100%;
+  }
+
+  .image-lightbox-content-zoomed {
+    width: 100%;
+  }
+}

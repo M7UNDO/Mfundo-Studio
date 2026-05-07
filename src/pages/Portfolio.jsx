@@ -13,8 +13,8 @@ export default function Portfolio() {
       description:
         "Designing and developing a responsive financial planning web application prototype that enables young South African professionals to better understand and manage their finances through interactive simulations, personalised strategy tracks, and real-time insights, while integrating educational content to support informed decision-making.",
       info: "Website",
-      liveLink: "",
-      githubLink: "",
+      liveLink: "https://m7undo.github.io/absa-nextgen-wealth/",
+      githubLink: "https://github.com/M7UNDO/absa-nextgen-wealth",
       tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
     },
     {
@@ -25,7 +25,7 @@ export default function Portfolio() {
         "Designing and developing a responsive, SEO-optimised website for Ngengebule Attorneys Inc that enhances the firm's digital presence, communicates its legal services effectively, and improves client engagement through intuitive navigation, brand-aligned design, and a professional, user-friendly experience.",
       info: "Website",
       liveLink: "https://ngengebule.co.za/",
-      githubLink: "",
+      githubLink: "https://github.com/M7UNDO/LNA",
       tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
     },
     {
@@ -36,7 +36,7 @@ export default function Portfolio() {
         "This project is an e-commerce website that integrates the Fake Store REST API along with my own custom products. It includes dynamic product loading, cart logic, and a complete front-end interface representing my brand.",
       info: "Website",
       liveLink: "https://m7undo.github.io/Shop-Northstar-Studios/",
-      githubLink: "",
+      githubLink: "https://github.com/M7UNDO/Shop-Northstar-Studios",
       tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
     },
   ];
