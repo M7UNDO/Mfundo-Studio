@@ -15,7 +15,7 @@ export default function Portfolio() {
       info: "Website",
       liveLink: "https://m7undo.github.io/absa-nextgen-wealth/",
       githubLink: "https://github.com/M7UNDO/absa-nextgen-wealth",
-      tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
+      tools: ["React JS", "JavaScript", "GSAP", "HTML", "CSS", "Supabase Auth"],
     },
     {
       id: "ngengebule-attorneys",
@@ -26,7 +26,7 @@ export default function Portfolio() {
       info: "Website",
       liveLink: "https://ngengebule.co.za/",
       githubLink: "https://github.com/M7UNDO/LNA",
-      tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
+      tools: ["React JS", "JavaScript", "GSAP", "HTML", "CSS"],
     },
     {
       id: "northstar-shop",
@@ -37,7 +37,7 @@ export default function Portfolio() {
       info: "Website",
       liveLink: "https://m7undo.github.io/Shop-Northstar-Studios/",
       githubLink: "https://github.com/M7UNDO/Shop-Northstar-Studios",
-      tools: ["React JS", "JavaScript", "GSAP", "HTML & CSS"],
+      tools: ["Plain JavaScript", "GSAP", "HTML", "CSS", "Fake Store API"],
     },
   ];
 

@@ -35,7 +35,7 @@ export default function AbsaCaseStudy() {
     <section className="absa-case-study">
       <section className="absa-hero">
         <Link to="/portfolio" className="back-link">
-          ← Back to Portfolio
+          <i class="fa-solid fa-angles-left"></i> Back to Portfolio
         </Link>
 
         <p className="case-label">UX/UI Design · React MVP · Financial Web App</p>
@@ -65,7 +65,7 @@ export default function AbsaCaseStudy() {
 
           <div>
             <span>Tools</span>
-            <strong>React, Vite, CSS, React Router, Recharts</strong>
+            <strong>React JS, Javascript, HTML, CSS, GSAP, Recharts, Supabase Auth</strong>
           </div>
         </div>
       </section>

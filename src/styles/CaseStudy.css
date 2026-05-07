@@ -1,4 +1,4 @@
-.absa-case-study {
+.case-study-page {
   width: min(118rem, calc(100% - 3.2rem));
   margin: 0 auto;
   padding: 5rem 0 8rem;
@@ -20,7 +20,7 @@
   color: var(--accent-colour);
 }
 
-.absa-hero {
+.case-hero {
   padding: 4rem 0 5rem;
 }
 
@@ -35,7 +35,7 @@
   text-transform: uppercase;
 }
 
-.absa-hero h1 {
+.case-hero h1 {
   max-width: 100rem;
   margin-bottom: 2rem;
   color: var(--primary-colour);
@@ -115,6 +115,7 @@
   font-size: clamp(2.8rem, 5vw, 4.8rem);
   line-height: 1.05;
   letter-spacing: -0.04em;
+  margin-bottom: 1rem;
 }
 
 .section-content {
@@ -217,7 +218,7 @@
 
 .wireframe-showcase {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: 1fr;
   gap: 6rem;
   margin-top: 4rem;
 }
@@ -229,7 +230,7 @@
 .wireframe-figure img {
   display: block;
   width: 100%;
-  max-height: 78rem;
+  height: auto;
   object-fit: contain;
   border: 0.1rem solid var(--form-border);
   border-radius: 2.4rem;
@@ -302,14 +303,10 @@
 
 .wireframe-button {
   display: block;
-
   width: 100%;
-
   padding: 0;
-
   border: none;
   background: transparent;
-
   cursor: pointer;
 }
 
@@ -325,7 +322,7 @@
 }
 
 @media (min-width: 768px) {
-  .absa-case-study {
+  .case-study-page {
     width: min(118rem, calc(100% - 5rem));
     padding-top: 7rem;
   }
@@ -363,9 +360,5 @@
 
   .case-section {
     padding: 7rem 0;
-  }
-
-  .wireframe-figure img {
-    max-height: 86rem;
   }
 }
