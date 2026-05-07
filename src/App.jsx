@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 import ThemeContext from "./context/ThemeContext";
-import {BrowserRouter, Router, Routes, Route} from "react-router-dom";
+import {HashRouter, Router, Routes, Route} from "react-router-dom";
 import ScrollToTop from "./components/ScrollToTop";
 import MainLayout from "./layouts/MainLayout";
 import Home from "./pages/Home";
@@ -27,7 +27,7 @@ function App() {
   return (
     <>
       <ThemeContext.Provider value={{theme, setTheme, toggleTheme}}>
-        <BrowserRouter>
+        <HashRouter>
           <ScrollToTop />
           <Routes>
             <Route element={<MainLayout />}>
@@ -39,7 +39,7 @@ function App() {
             </Route>
             <Route path="*" element={<NotFound />}></Route>
           </Routes>
-        </BrowserRouter>
+        </HashRouter>
       </ThemeContext.Provider>
     </>
   );
