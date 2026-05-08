@@ -1,36 +1,38 @@
-import daphneBusinessCardPdf from "../assets/designs/daphne-louw-business-card.pdf";
-import drAlexBusinessCardPdf from "../assets/designs/dr-alex-business-card.pdf";
+import drAlexBusinessCardPdf from "../assets/documents/designs/stationery/dr-alex-business-card.pdf";
 
-import drAlexEmailSignature1 from "../assets/designs/dr-alex-email-signature-1.png";
-import drAlexEmailSignature2 from "../assets/designs/dr-alex-email-signature-2.png";
-import drAlexEmailSignature3 from "../assets/designs/dr-alex-email-signature-3.png";
-import drAlexEmailSignatureTransparent from "../assets/designs/dr-alex-email-signature-transparent.png";
+import drAlexEmailSignature1 from "../assets/images/designs/stationery/dr-alex-email-signature-1.png";
+import drAlexEmailSignature2 from "../assets/images/designs/stationery/dr-alex-email-signature-2.png";
+import drAlexEmailSignature3 from "../assets/images/designs/stationery/dr-alex-email-signature-3.png";
+import drAlexEmailSignatureTransparent from "../assets/images/designs/stationery/dr-alex-email-signature-transparent.png";
 
-import drAlexLetterhead from "../assets/designs/dr-alex-letterhead.png";
-import drAlexLogoWhitePdf from "../assets/designs/dr-alex-logo-white.pdf";
-import drAlexLogo from "../assets/designs/dr-alex-logo.png";
+import drAlexLetterhead from "../assets/images/designs/stationery/dr-alex-letterhead.png";
+import drAlexLogo from "../assets/images/designs/logos/dr-alex-logo.png";
 
-import lakatsoLogoWhite from "../assets/designs/lakatso-logo-white.png";
+import lakatsoLogoLight from "../assets/images/designs/logos/lakatso-logo-light.png";
+import lakatsoLogoDark from "../assets/images/designs/logos/lakatso-logo-dark.png";
 
-import lesakhiLogoWhite from "../assets/designs/lesakhi-investments-logo-white.png";
-import lesakhiLogo from "../assets/designs/lesakhi-investments-logo.png";
+import lesakhiLogoLight from "../assets/images/designs/logos/lesakhi-investments-logo-light.png";
+import lesakhiLogoDark from "../assets/images/designs/logos/lesakhi-investments-logo-dark.png";
 
-import letterheadDesign1Pdf from "../assets/designs/letterhead-design-1.pdf";
-import letterheadDesign2Pdf from "../assets/designs/letterhead-design-2.pdf";
-import letterheadDesign3Pdf from "../assets/designs/letterhead-design-3.pdf";
-import letterheadDesign4Pdf from "../assets/designs/letterhead-design-4.pdf";
-import letterheadDesign5Pdf from "../assets/designs/letterhead-design-5.pdf";
-import letterheadDesign6Pdf from "../assets/designs/letterhead-design-6.pdf";
-import letterheadDesign7Pdf from "../assets/designs/letterhead-design-7.pdf";
+import letterheadDesign1Pdf from "../assets/documents/designs/stationery/letterhead-design-1.pdf";
+import letterheadDesign2Pdf from "../assets/documents/designs/stationery/letterhead-design-2.pdf";
+import letterheadDesign3Pdf from "../assets/documents/designs/stationery/letterhead-design-3.pdf";
+import letterheadDesign4Pdf from "../assets/documents/designs/stationery/letterhead-design-4.pdf";
+import letterheadDesign5Pdf from "../assets/documents/designs/stationery/letterhead-design-5.pdf";
+import letterheadDesign6Pdf from "../assets/documents/designs/stationery/letterhead-design-6.pdf";
+import letterheadDesign7Pdf from "../assets/documents/designs/stationery/letterhead-design-7.pdf";
 
-import lnaLogoText from "../assets/designs/lna-logo-text.png";
-import lnaLogo from "../assets/designs/lna-logo.png";
+import lnaLogoDark from "../assets/images/designs/logos/lna-logo-dark.svg";
+import lnaLogoLight from "../assets/images/designs/logos/lna-logo-light.svg";
 
-import logoDraftsBluePdf from "../assets/designs/logo-drafts-blue.pdf";
-import logoDraftsGoldPdf from "../assets/designs/logo-drafts-gold.pdf";
-import logoFinalDesignPdf from "../assets/designs/logo-final-design.pdf";
+import logoDraftsBluePdf from "../assets/documents/designs/logos/logo-drafts-blue.pdf";
+import logoDraftsBlueCover from "../assets/documents/designs/logos/logo-drafts-blue.png";
+import logoDraftsGoldPdf from "../assets/documents/designs/logos/logo-drafts-gold.pdf";
+import logoDraftsGoldCover from "../assets/documents/designs/logos/logo-drafts-gold.png";
+import landdAcademy from "../assets/images/designs/logos/l&d-academy-logo.svg";
 
-import northstarLogoWhite from "../assets/designs/northstar-studios-white.svg";
+import northstarLogoDark from "../assets/images/designs/logos/northstar-studios-dark.svg";
+import northstarLogoLight from "../assets/images/designs/logos/northstar-studios-light.svg";
 
 const designData = [
   {
