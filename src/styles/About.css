@@ -128,7 +128,7 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-/* Skills & Achievements Grid */
+
 .bottom-container {
   display: grid;
   grid-template-columns: 1fr;
@@ -144,7 +144,8 @@
 .skill-tags span {
   padding: 0.8rem 1.6rem;
   background: rgba(127, 90, 255, 0.05);
-  border: 1px solid rgba(127, 90, 255, 0.1);
+  border: 1px solid var(--accent-colour);
+  color: var(--accent-colour);
   border-radius: 8px;
   font-size: 1.3rem;
 }

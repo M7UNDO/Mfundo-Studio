@@ -71,9 +71,6 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
   font-family: var(--secondary-font);
 }
 
-.logo:hover{
-  color: var(--accent-colour);
-}
 
 .logo {
   height: 100%;

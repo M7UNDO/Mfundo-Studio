@@ -1,4 +1,5 @@
 import React, {useRef} from "react";
+import {Link} from "react-router-dom";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import "../styles/Home.css";
@@ -44,7 +45,7 @@ export default function Home() {
           </p>
 
           <div className="hero-cta">
-            <button className="primary-btn">View Projects</button>
+            <Link to="/portfolio" className="primary-btn">View Projects</Link>
             <a href="/Mfundo-Studio/cv/Mfundo-Dhlamini_CV.pdf" target="_blank" rel="noopener noreferrer" className="cv-button secondary-btn">
               View CV
             </a>

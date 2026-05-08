@@ -125,7 +125,7 @@ export default function About() {
             <div className="skill-tags">
               <span>JavaScript</span> <span>React JS</span> <span>CSS</span>
               <span>HTML</span>
-              <span>Responsive Design</span> <span>Blender 3D</span> <span>Game Design</span>
+              <span>Responsive Design</span> <span>3D Modelling</span> <span>Game Design</span>
               <span>Graphic Design</span> <span>Figma</span> <span>Illustrator</span>
             </div>
           </div>
