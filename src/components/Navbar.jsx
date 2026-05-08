@@ -27,7 +27,6 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
-
   function closeMenu() {
     setMenuOpen(false);
   }
@@ -36,7 +35,7 @@ export default function Navbar() {
     <header>
       <nav className="navbar">
         <Link to="/" className="logo">
-          <img src={theme === "light"? logoBlack: logoWhite} alt="" />
+          <img src={theme === "light" ? logoBlack : logoWhite} alt="" />
           Mfundo Dhlamini
         </Link>
 
@@ -69,8 +68,8 @@ export default function Navbar() {
               <i className="fa-brands fa-linkedin-in"></i>
             </a>
 
-            <a href="#" target="_blank" rel="noreferrer">
-              <i className="fa-brands fa-instagram"></i>
+            <a href="https://github.com/M7UNDO" target="_blank" rel="noreferrer">
+              <i class="fa-brands fa-github"></i>
             </a>
           </div>
           <ThemeToggle />
