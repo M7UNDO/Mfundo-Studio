@@ -27,8 +27,10 @@ import lnaLogoLight from "../assets/images/designs/logos/lna-logo-light.svg";
 
 import logoDraftsBluePdf from "../assets/documents/designs/logos/logo-drafts-blue.pdf";
 import logoDraftsBlueCover from "../assets/documents/designs/logos/logo-drafts-blue.png";
+
 import logoDraftsGoldPdf from "../assets/documents/designs/logos/logo-drafts-gold.pdf";
 import logoDraftsGoldCover from "../assets/documents/designs/logos/logo-drafts-gold.png";
+
 import landdAcademy from "../assets/images/designs/logos/l&d-academy-logo.svg";
 
 import northstarLogoDark from "../assets/images/designs/logos/northstar-studios-dark.svg";
@@ -47,44 +49,40 @@ const designData = [
     title: "LNA Logo",
     category: "Logo Design",
     type: "image",
-    src: lnaLogo,
-  },
-  {
-    id: "lna-logo-text",
-    title: "LNA Logo Text",
-    category: "Logo Design",
-    type: "image",
-    src: lnaLogoText,
+    lightSrc: lnaLogoLight,
+    darkSrc: lnaLogoDark,
   },
   {
     id: "northstar-studios-logo",
     title: "Northstar Studios Logo",
     category: "Logo Design",
     type: "svg",
-    src: northstarLogoWhite,
+    lightSrc: northstarLogoLight,
+    darkSrc: northstarLogoDark,
   },
   {
-    id: "lakatso-logo-white",
+    id: "lakatso-logo",
     title: "Lakatso Logo",
     category: "Logo Design",
     type: "image",
-    src: lakatsoLogoWhite,
+    lightSrc: lakatsoLogoLight,
+    darkSrc: lakatsoLogoDark,
   },
   {
     id: "lesakhi-investments-logo",
     title: "Lesakhi Investments Logo",
     category: "Logo Design",
     type: "image",
-    src: lesakhiLogo,
+    lightSrc: lesakhiLogoLight,
+    darkSrc: lesakhiLogoDark,
   },
   {
-    id: "lesakhi-investments-logo-white",
-    title: "Lesakhi Investments White Logo",
+    id: "landd-academy-logo",
+    title: "L&D Academy Logo",
     category: "Logo Design",
-    type: "image",
-    src: lesakhiLogoWhite,
+    type: "svg",
+    src: landdAcademy,
   },
-
   {
     id: "dr-alex-letterhead",
     title: "Dr Alex Letterhead",
@@ -92,7 +90,6 @@ const designData = [
     type: "image",
     src: drAlexLetterhead,
   },
-
   {
     id: "dr-alex-email-signature-1",
     title: "Dr Alex Email Signature 1",
@@ -121,15 +118,6 @@ const designData = [
     type: "image",
     src: drAlexEmailSignatureTransparent,
   },
-
-  {
-    id: "daphne-louw-business-card",
-    title: "Daphne Louw Business Card",
-    category: "Business Card",
-    type: "pdf",
-    src: drAlexLogo,
-    link: daphneBusinessCardPdf,
-  },
   {
     id: "dr-alex-business-card",
     title: "Dr Alex Business Card",
@@ -138,29 +126,12 @@ const designData = [
     src: drAlexLogo,
     link: drAlexBusinessCardPdf,
   },
-
-  {
-    id: "dr-alex-logo-white",
-    title: "Dr Alex White Logo",
-    category: "Logo Document",
-    type: "pdf",
-    src: drAlexLogo,
-    link: drAlexLogoWhitePdf,
-  },
-  {
-    id: "logo-final-design",
-    title: "Final Logo Design",
-    category: "Branding Document",
-    type: "pdf",
-    src: lnaLogo,
-    link: logoFinalDesignPdf,
-  },
   {
     id: "logo-drafts-blue",
     title: "Blue Logo Drafts",
     category: "Logo Drafts",
     type: "pdf",
-    src: lnaLogo,
+    src: logoDraftsBlueCover,
     link: logoDraftsBluePdf,
   },
   {
@@ -168,10 +139,9 @@ const designData = [
     title: "Gold Logo Drafts",
     category: "Logo Drafts",
     type: "pdf",
-    src: lnaLogo,
+    src: logoDraftsGoldCover,
     link: logoDraftsGoldPdf,
   },
-
   {
     id: "letterhead-design-1",
     title: "Letterhead Design 1",
