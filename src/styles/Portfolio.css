@@ -31,7 +31,7 @@
   transition: transform 0.5s ease;
 }
 
-.project-card:hover .project-visual-wrapper {
+.project-visual-wrapper:hover {
   transform: scale(0.98);
 }
 
@@ -100,11 +100,8 @@
 
 .tool-tag:hover {
   border-color: rgba(127, 90, 255, 0.24);
-
   background: rgba(127, 90, 255, 0.06);
-
   color: var(--accent-colour);
-
   transform: translateY(-0.1rem);
 }
 
@@ -156,7 +153,10 @@
 
 .project-link:hover {
   color: var(--accent-colour);
-  transform: translateY(-2px);
+}
+
+.project-link:hover .link-text{
+  text-decoration: underline;
 }
 
 .live-link {

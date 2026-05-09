@@ -16,7 +16,7 @@ export default function DesignCard({src, lightSrc, darkSrc, title, category, typ
     onOpenImage({
       src: displayImage,
       alt: title,
-      caption: `${title} — ${category}`,
+      caption: `${title} - ${category}`,
       variant: "design",
     });
   }

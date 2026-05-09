@@ -38,9 +38,9 @@ export default function About() {
 
             <div className="bio-text">
               <p>
-                I'm an Honours Digital Arts student specialising in <strong>Game Design</strong> and{" "}
-                <strong>Interactive Media</strong>, with hands-on experience in <strong>front-end development</strong>,{" "}
-                <strong>UI/UX design</strong>, and building brand-driven digital solutions.
+                Honours Digital Arts student majoring in <strong>Game Design</strong> and{" "}
+                <strong>Interactive Media</strong>, with hands-on experience in <strong>Front-end web development</strong>,{" "}
+                <strong>User Interface(UI), and User Experience design(UX)</strong>, and building brand-driven digital solutions.
               </p>
 
               <p>

@@ -1,4 +1,5 @@
 import drAlexBusinessCardPdf from "../assets/documents/designs/stationery/dr-alex-business-card.pdf";
+import drAlexBusinessCard from "../assets/documents/designs/stationery/dr-alex-business-card.png";
 
 import drAlexEmailSignature1 from "../assets/images/designs/stationery/dr-alex-email-signature-1.png";
 import drAlexEmailSignature2 from "../assets/images/designs/stationery/dr-alex-email-signature-2.png";
@@ -21,6 +22,14 @@ import letterheadDesign4Pdf from "../assets/documents/designs/stationery/letterh
 import letterheadDesign5Pdf from "../assets/documents/designs/stationery/letterhead-design-5.pdf";
 import letterheadDesign6Pdf from "../assets/documents/designs/stationery/letterhead-design-6.pdf";
 import letterheadDesign7Pdf from "../assets/documents/designs/stationery/letterhead-design-7.pdf";
+
+import letterheadDesign1 from "../assets/documents/designs/stationery/letterhead-design-1.png";
+import letterheadDesign2 from "../assets/documents/designs/stationery/letterhead-design-2.png";
+import letterheadDesign3 from "../assets/documents/designs/stationery/letterhead-design-3.png";
+import letterheadDesign4 from "../assets/documents/designs/stationery/letterhead-design-4.png";
+import letterheadDesign5 from "../assets/documents/designs/stationery/letterhead-design-5.png";
+import letterheadDesign6 from "../assets/documents/designs/stationery/letterhead-design-6.png";
+import letterheadDesign7 from "../assets/documents/designs/stationery/letterhead-design-7.png";
 
 import lnaLogoDark from "../assets/images/designs/logos/lna-logo-dark.svg";
 import lnaLogoLight from "../assets/images/designs/logos/lna-logo-light.svg";
@@ -46,7 +55,7 @@ const designData = [
   },
   {
     id: "lna-logo",
-    title: "LNA Logo",
+    title: "Ngengebule Attorneys Inc Logo",
     category: "Logo Design",
     type: "image",
     lightSrc: lnaLogoLight,
@@ -70,7 +79,7 @@ const designData = [
   },
   {
     id: "lesakhi-investments-logo",
-    title: "Lesakhi Investments Logo",
+    title: "Lesakhi Investments Final Logo",
     category: "Logo Design",
     type: "image",
     lightSrc: lesakhiLogoLight,
@@ -112,23 +121,16 @@ const designData = [
     src: drAlexEmailSignature3,
   },
   {
-    id: "dr-alex-email-signature-transparent",
-    title: "Dr Alex Email Signature Transparent",
-    category: "Email Signature",
-    type: "image",
-    src: drAlexEmailSignatureTransparent,
-  },
-  {
     id: "dr-alex-business-card",
     title: "Dr Alex Business Card",
     category: "Business Card",
     type: "pdf",
-    src: drAlexLogo,
+    src: drAlexBusinessCard,
     link: drAlexBusinessCardPdf,
   },
   {
     id: "logo-drafts-blue",
-    title: "Blue Logo Drafts",
+    title: "Lesakhi Investments Blue Logo Drafts",
     category: "Logo Drafts",
     type: "pdf",
     src: logoDraftsBlueCover,
@@ -136,7 +138,7 @@ const designData = [
   },
   {
     id: "logo-drafts-gold",
-    title: "Gold Logo Drafts",
+    title: "Lesakhi Investments Gold Logo Drafts",
     category: "Logo Drafts",
     type: "pdf",
     src: logoDraftsGoldCover,
@@ -147,7 +149,7 @@ const designData = [
     title: "Letterhead Design 1",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign1,
     link: letterheadDesign1Pdf,
   },
   {
@@ -155,7 +157,7 @@ const designData = [
     title: "Letterhead Design 2",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign2,
     link: letterheadDesign2Pdf,
   },
   {
@@ -163,7 +165,7 @@ const designData = [
     title: "Letterhead Design 3",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign3,
     link: letterheadDesign3Pdf,
   },
   {
@@ -171,7 +173,7 @@ const designData = [
     title: "Letterhead Design 4",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign4,
     link: letterheadDesign4Pdf,
   },
   {
@@ -179,7 +181,7 @@ const designData = [
     title: "Letterhead Design 5",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign5,
     link: letterheadDesign5Pdf,
   },
   {
@@ -187,7 +189,7 @@ const designData = [
     title: "Letterhead Design 6",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign6,
     link: letterheadDesign6Pdf,
   },
   {
@@ -195,7 +197,7 @@ const designData = [
     title: "Letterhead Design 7",
     category: "Letterhead",
     type: "pdf",
-    src: drAlexLetterhead,
+    src: letterheadDesign7,
     link: letterheadDesign7Pdf,
   },
 ];
