@@ -1,16 +1,36 @@
+// src/pages/Portfolio.jsx
+
+import {useState} from "react";
 import ProjectCard from "../components/ProjectCard";
 import DesignCard from "../components/DesignCard";
+import ImageLightbox from "../components/ImageLightbox";
+
 import projectData from "../data/projectData";
 import designData from "../data/designData";
+
 import "../styles/Portfolio.css";
 
 export default function Portfolio() {
+  const [selectedImage, setSelectedImage] = useState(null);
+
+  function openLightbox(image) {
+    setSelectedImage(image);
+  }
+
+  function closeLightbox() {
+    setSelectedImage(null);
+  }
+
   return (
     <main className="portfolio-page">
-      <section className="portfolio-section">
+      <section className="portfolio-section projects-section">
         <div className="portfolio-section-header">
           <p className="portfolio-kicker">Selected Work</p>
-          <h1>Web & Interactive Projects</h1>
+          <h2>Web & Interactive Projects</h2>
+          <p>
+            Responsive websites, web applications, and interactive front-end projects focused on usability, interface
+            design, and polished digital experiences.
+          </p>
         </div>
 
         <div className="portfolio-grid">
@@ -48,10 +68,13 @@ export default function Portfolio() {
               category={design.category}
               type={design.type}
               link={design.link}
+              onOpenImage={openLightbox}
             />
           ))}
         </div>
       </section>
+
+      <ImageLightbox isOpen={!!selectedImage} image={selectedImage} onClose={closeLightbox} />
     </main>
   );
 }

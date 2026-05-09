@@ -20,11 +20,12 @@ import vehicleStudio from "../assets/images/absa/vehiclefinance.jpg";
 export default function AbsaCaseStudy() {
   const [selectedImage, setSelectedImage] = useState(null);
 
-  function openLightbox(src, alt, caption) {
+  function openLightbox(src, alt, caption, variant = "default") {
     setSelectedImage({
       src,
       alt,
       caption,
+      variant,
     });
   }
 

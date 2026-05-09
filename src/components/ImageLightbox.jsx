@@ -58,7 +58,9 @@ export default function ImageLightbox({isOpen, image, onClose}) {
       </div>
 
       <figure
-        className={`image-lightbox-content ${zoomed ? "image-lightbox-content-zoomed" : ""}`}
+        className={`image-lightbox-content ${zoomed ? "image-lightbox-content-zoomed" : ""} ${
+          image.variant === "design" ? "image-lightbox-content-design" : ""
+        }`}
         onClick={(event) => event.stopPropagation()}
       >
         <img src={image.src} alt={image.alt} />

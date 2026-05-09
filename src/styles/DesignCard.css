@@ -1,0 +1,91 @@
+.design-card {
+  background: transparent;
+  border: none;
+}
+
+.design-card-link {
+  display: block;
+  color: inherit;
+  text-decoration: none;
+}
+
+.design-card-image-wrapper {
+  aspect-ratio: 4 / 3;
+  margin-bottom: 1.8rem;
+  padding: 2rem;
+  border-radius: 1rem;
+  background: var(--background-colour-light);
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.5s ease;
+}
+
+.design-card:hover .design-card-image-wrapper {
+  transform: scale(0.98);
+}
+
+.design-card-image-wrapper img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.design-card-info span {
+  display: inline-flex;
+  width: fit-content;
+  margin-bottom: 1rem;
+  padding: 0.55rem 1.1rem;
+  border: 0.1rem solid rgba(127, 90, 255, 0.22);
+  border-radius: 999rem;
+  background: rgba(127, 90, 255, 0.08);
+  color: var(--accent-colour);
+  font-size: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.design-card-info h3 {
+  font-size: 2rem;
+  font-weight: 500;
+  line-height: 1.2;
+  margin-bottom: 0.6rem;
+}
+
+.design-card-info p {
+  color: var(--typography-colour);
+  font-family: var(--secondary-font);
+  font-size: 1.35rem;
+  opacity: 0.7;
+}
+
+.design-card-meta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  margin-bottom: 1rem;
+  flex-wrap: wrap;
+}
+
+.design-format-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 0.45rem 0.9rem;
+
+  border: 0.1rem solid var(--form-border);
+  border-radius: 999rem;
+
+  background: var(--background-colour-light);
+
+  color: var(--primary-transparent);
+
+  font-size: 0.95rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}

@@ -123,6 +123,26 @@
   cursor: pointer;
 }
 
+.image-lightbox-content-design {
+  width: min(90rem, 90vw);
+}
+
+.image-lightbox-content-design img {
+  width: 100%;
+  max-height: 78vh;
+  object-fit: contain;
+  padding: 3rem;
+}
+
+.image-lightbox-content-design.image-lightbox-content-zoomed {
+  width: min(120rem, 100%);
+}
+
+.image-lightbox-content-design.image-lightbox-content-zoomed img {
+  width: 100%;
+  max-height: none;
+}
+
 @media screen and (max-width: 768px) {
   .image-lightbox-overlay {
     padding: 1.6rem;
