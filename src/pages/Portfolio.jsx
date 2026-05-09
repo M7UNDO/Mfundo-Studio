@@ -42,6 +42,8 @@ export default function Portfolio() {
             <DesignCard
               key={design.id}
               src={design.src}
+              lightSrc={design.lightSrc}
+              darkSrc={design.darkSrc}
               title={design.title}
               category={design.category}
               type={design.type}

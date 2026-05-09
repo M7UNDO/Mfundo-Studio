@@ -252,24 +252,6 @@
   opacity: 0.7;
 }
 
-.design-img-light,
-.design-img-dark {
-  display: none;
-}
-
-.design-img-light,
-.design-img-dark {
-  display: none;
-}
-
-html[data-theme="dark"] .design-img-light {
-  display: block;
-}
-
-html[data-theme="light"] .design-img-dark {
-  display: block;
-}
-
 @media screen and (min-width: 768px) {
   .portfolio-grid {
     grid-template-columns: 1fr 1fr;
