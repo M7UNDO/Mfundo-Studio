@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 import "../styles/AbsaCaseStudy.css";
 
 import ImageLightbox from "../components/ImageLightbox";
-import coverImage from "../assets/images/absa/cover.png";
+import coverImage from "../assets/images/covers/Absa_NextGen.svg";
 import informationArchitecture from "../assets/images/absa/ABSA-sitemap.png";
 import absaPallete from "../assets/images/absa/absa-palette.png";
 import moneySnapshot from "../assets/images/absa/moneysnapshot.jpg";

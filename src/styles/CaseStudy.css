@@ -105,7 +105,7 @@
 
 .two-column {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: repeat(2, 1fr);
   gap: 2.8rem;
 }
 
@@ -233,7 +233,6 @@
   height: auto;
   object-fit: contain;
   border: 0.1rem solid var(--form-border);
-  border-radius: 2.4rem;
   background: var(--background-colour-light);
   box-shadow: var(--hard-shadow);
 }
@@ -338,7 +337,8 @@
   }
 
   .wireframe-showcase {
-    gap: 7rem;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
   }
 }
 
