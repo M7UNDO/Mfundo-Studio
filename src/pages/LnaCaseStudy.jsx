@@ -11,6 +11,8 @@ import coverImage from "../assets/images/covers/LNA_Web.svg";
 import lnaSiteMap from "../assets/images/lna/ngengebule-attorneys-sitemap.png";
 import lnaUserFlow from "../assets/images/lna/ngengebule attorneys-userflow.png";
 
+import BackToTop from "../components/BackToTop";
+
 export default function LnaCaseStudy() {
   const [selectedImage, setSelectedImage] = useState(null);
 
@@ -725,7 +727,8 @@ export default function LnaCaseStudy() {
           </a>
         </div>
       </section>
-
+      
+      <BackToTop/>
       <ImageLightbox isOpen={!!selectedImage} image={selectedImage} onClose={closeLightbox} />
     </main>
   );

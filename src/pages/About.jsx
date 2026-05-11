@@ -1,26 +1,201 @@
 import React, {useRef} from "react";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
+import {ScrollTrigger} from "gsap/ScrollTrigger";
 import "../styles/About.css";
 import profileImg from "../assets/profile/M7UNDO_Pfp.png";
+
+gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
   const container = useRef();
 
   useGSAP(
     () => {
-      const tl = gsap.timeline();
-      tl.from(".about-badge", {opacity: 0, y: 20, duration: 0.6})
-        .from(".about-title", {opacity: 0, y: 30, duration: 0.8}, "-=0.3")
-        .from(
+      const tl = gsap.timeline({
+        defaults: {
+          ease: "power3.out",
+          duration: 0.8,
+        },
+      });
+
+      // =========================
+      // HERO / INTRO
+      // =========================
+
+      tl.fromTo(
+        ".about-badge",
+        {
+          opacity: 0,
+          y: 18,
+        },
+        {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+        },
+      )
+        .fromTo(
+          ".about-title",
+          {
+            opacity: 0,
+            y: 34,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.9,
+          },
+          "-=0.35",
+        )
+        .fromTo(
           ".bio-text p",
           {
             opacity: 0,
-            x: -20,
-            stagger: 0.2,
+            x: -24,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            stagger: 0.18,
             duration: 0.8,
           },
-          "-=0.4",
+          "-=0.45",
+        )
+        .fromTo(
+          ".bio-text blockquote",
+          {
+            opacity: 0,
+            y: 24,
+            scale: 0.98,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            duration: 0.75,
+          },
+          "-=0.25",
+        )
+        .fromTo(
+          ".profile",
+          {
+            opacity: 0,
+            x: 40,
+            scale: 0.96,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power4.out",
+          },
+          "-=1",
+        )
+
+        // =========================
+        // EXPERIENCE SECTION
+        // =========================
+
+        .fromTo(
+          ".experience-grid .section-label",
+          {
+            opacity: 0,
+            y: 24,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.7,
+          },
+          "-=0.15",
+        )
+
+        .fromTo(
+          ".experience-card",
+          {
+            opacity: 0,
+            y: 32,
+            scale: 0.98,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            stagger: 0.14,
+            duration: 0.75,
+          },
+          "-=0.2",
+        )
+
+        // =========================
+        // SKILLS SECTION
+        // =========================
+
+        .fromTo(
+          ".skills-column .section-label",
+          {
+            opacity: 0,
+            y: 20,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.65,
+          },
+          "-=0.2",
+        )
+
+        .fromTo(
+          ".skill-tags span",
+          {
+            opacity: 0,
+            y: 16,
+            scale: 0.94,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            scale: 1,
+            stagger: 0.06,
+            duration: 0.45,
+            ease: "back.out(1.7)",
+          },
+          "-=0.3",
+        )
+
+        // =========================
+        // ACHIEVEMENTS SECTION
+        // =========================
+
+        .fromTo(
+          ".achievements-column .section-label",
+          {
+            opacity: 0,
+            y: 20,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 0.65,
+          },
+          "-=0.25",
+        )
+
+        .fromTo(
+          ".achievement-item",
+          {
+            opacity: 0,
+            x: 24,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            stagger: 0.1,
+            duration: 0.65,
+          },
+          "-=0.45",
         );
     },
     {scope: container},
@@ -39,8 +214,9 @@ export default function About() {
             <div className="bio-text">
               <p>
                 Honours Digital Arts student majoring in <strong>Game Design</strong> and{" "}
-                <strong>Interactive Media</strong>, with hands-on experience in <strong>Front-end web development</strong>,{" "}
-                <strong>User Interface(UI), and User Experience design(UX)</strong>, and building brand-driven digital solutions.
+                <strong>Interactive Media</strong>, with hands-on experience in{" "}
+                <strong>front-end web development</strong>, <strong>UI</strong> and <strong>UX design</strong>, and
+                creating thoughtful, brand-driven digital solutions.
               </p>
 
               <p>
@@ -49,9 +225,10 @@ export default function About() {
               </p>
 
               <p>
-                My background in game design shapes how I approach everything. I think in systems, flows, and user
-                journeys, understanding that every interaction matters. Beyond the technical side, I enjoy solving
-                problems creatively, collaborating with others, and continuously refining my craft.
+                My background in game design shapes the way I approach digital experiences. I naturally think in
+                systems, flows, and user journeys, understanding that every interaction matters. Beyond the technical
+                side, I enjoy solving problems creatively, collaborating with others, and continuously refining my
+                craft.
               </p>
 
               <blockquote>

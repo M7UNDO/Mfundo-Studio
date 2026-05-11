@@ -1,0 +1,35 @@
+.back-to-top-btn {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+
+  width: 4rem;
+  height: 5rem;
+
+  border: none;
+  border-radius: 3rem;
+
+  background-color: var(--accent-colour);
+  color: white;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  cursor: pointer;
+
+  font-size: 2rem;
+
+  transition: all 0.3s ease;
+
+  z-index: 1000;
+}
+
+.back-to-top-btn:hover {
+  transform: translateY(-0.4rem);
+  background-color: var(--accent-colour-hover);
+}
+
+.back-to-top-btn i {
+  pointer-events: none;
+}

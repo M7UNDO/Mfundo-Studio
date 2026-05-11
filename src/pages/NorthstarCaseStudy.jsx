@@ -18,6 +18,7 @@ import mobileMenu from "../assets/images/northstar/mobile-menu.png";
 import loginPage from "../assets/images/northstar/login-page.png";
 import siteMap from "../assets/images/northstar/site-map.png";
 import userFlow from "../assets/images/northstar/user-flow.png";
+import BackToTop from "../components/BackToTop";
 
 export default function NorthstarCaseStudy() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -898,7 +899,8 @@ export default function NorthstarCaseStudy() {
           </a>
         </div>
       </section>
-
+      
+      <BackToTop/>
       <ImageLightbox isOpen={!!selectedImage} image={selectedImage} onClose={closeLightbox} />
     </main>
   );

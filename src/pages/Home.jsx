@@ -39,25 +39,32 @@ export default function Home() {
           </h1>
 
           <p className="hero-description">
-            Digital Arts Student & Front-End Developer. Merging <strong>Interactive Media</strong> with{" "}
-            <strong>Game Design</strong>
-            to build immersive digital experiences.
+            Designing and developing immersive digital experiences through the intersection of{" "}
+            <strong>UI/UX Design</strong>, <strong>Front-End Development</strong>, and <strong>Game Design</strong>.
           </p>
 
           <div className="hero-cta">
-            <Link to="/portfolio" className="primary-btn">View Projects</Link>
-            <a href="/Mfundo-Studio/cv/Mfundo-Dhlamini_CV.pdf" target="_blank" rel="noopener noreferrer" className="cv-button secondary-btn">
+            <Link to="/portfolio" className="primary-btn">
+              View Projects
+            </Link>
+            <a
+              href="/Mfundo-Studio/cv/Mfundo-Dhlamini_CV.pdf"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="cv-button secondary-btn"
+            >
               View CV
             </a>
           </div>
         </div>
 
-        {/* Decorative stats or skills tag cloud */}
         <div className="hero-skills-footer">
-          <span>React JS</span>
-          <span>Unity/Unreal</span>
+          <span>React</span>
+          <span>JavaScript</span>
+          <span>UI/UX Design</span>
+          <span>Front-End Development</span>
+          <span>Game Design</span>
           <span>GSAP</span>
-          <span>UI/UX</span>
         </div>
       </section>
     </div>

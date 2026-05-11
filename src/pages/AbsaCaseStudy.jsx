@@ -2,7 +2,7 @@
 
 import {useState} from "react";
 import {Link} from "react-router-dom";
-import "../styles/AbsaCaseStudy.css";
+import "../styles/CaseStudy.css";
 
 import ImageLightbox from "../components/ImageLightbox";
 import coverImage from "../assets/images/covers/Absa_NextGen.svg";
@@ -16,6 +16,7 @@ import strategyTracks from "../assets/images/absa/strategytracks.jpg";
 import bnplStudio from "../assets/images/absa/bnpl.jpg";
 import homeLoanStudio from "../assets/images/absa/homeloancalculator.jpg";
 import vehicleStudio from "../assets/images/absa/vehiclefinance.jpg";
+import BackToTop from "../components/BackToTop";
 
 export default function AbsaCaseStudy() {
   const [selectedImage, setSelectedImage] = useState(null);
@@ -33,10 +34,10 @@ export default function AbsaCaseStudy() {
     setSelectedImage(null);
   }
   return (
-    <section className="absa-case-study">
-      <section className="absa-hero">
+    <section className="case-study-page">
+      <section className="case-hero">
         <Link to="/portfolio" className="back-link">
-          <i class="fa-solid fa-angles-left"></i> Back to Portfolio
+          <i className="fa-solid fa-angles-left"></i> Back to Portfolio
         </Link>
 
         <p className="case-label">UX/UI Design · React MVP · Financial Web App</p>
@@ -661,6 +662,8 @@ export default function AbsaCaseStudy() {
           </a>
         </div>
       </section>
+
+      <BackToTop/>
       <ImageLightbox isOpen={!!selectedImage} image={selectedImage} onClose={closeLightbox} />
     </section>
   );
