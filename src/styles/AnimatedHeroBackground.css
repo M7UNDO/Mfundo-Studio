@@ -1,0 +1,95 @@
+.animated-hero-bg {
+  position: fixed;
+  inset: 0;
+  z-index: -10;
+  overflow: hidden;
+  pointer-events: none;
+  background:
+    radial-gradient(circle at 72% 15%, rgba(144, 233, 255, 0.42), transparent 18%),
+    radial-gradient(circle at 50% 45%, rgba(127, 90, 255, 0.45), transparent 26%),
+    linear-gradient(120deg, #05040f 0%, #160826 35%, #351061 62%, #90e9ff 140%);
+}
+
+.animated-hero-bg::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(255, 255, 255, 0.35) 0.1rem, transparent 0.1rem);
+  background-size: 8rem 8rem;
+  opacity: 0.18;
+}
+
+.hero-orb {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(0.2rem);
+  opacity: 0.75;
+  mix-blend-mode: screen;
+}
+
+.hero-orb-large {
+  width: 32rem;
+  height: 32rem;
+  top: 8%;
+  right: 18%;
+  background: linear-gradient(135deg, #7f5aff, #90e9ff);
+}
+
+.hero-orb-medium {
+  width: 22rem;
+  height: 22rem;
+  bottom: 8%;
+  left: 34%;
+  background: linear-gradient(135deg, #7f5aff, #3f2b96);
+}
+
+.hero-orb-small {
+  width: 9rem;
+  height: 9rem;
+  top: 18%;
+  right: 10%;
+  background: linear-gradient(135deg, #90e9ff, #7f5aff);
+}
+
+.hero-outline-shape {
+  position: absolute;
+  width: 14rem;
+  height: 14rem;
+  top: 14%;
+  left: 10%;
+  border: 0.2rem solid rgba(255, 255, 255, 0.14);
+  border-radius: 46% 54% 62% 38% / 42% 38% 62% 58%;
+}
+
+.hero-particle {
+  position: absolute;
+  width: 0.35rem;
+  height: 0.35rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.65);
+}
+
+.particle-1 { top: 16%; left: 18%; }
+.particle-2 { top: 28%; right: 16%; }
+.particle-3 { bottom: 32%; left: 12%; }
+.particle-4 { bottom: 20%; right: 28%; }
+.particle-5 { top: 58%; left: 62%; }
+
+@media (max-width: 768px) {
+  .hero-orb-large {
+    width: 22rem;
+    height: 22rem;
+    right: -4rem;
+  }
+
+  .hero-orb-medium {
+    width: 18rem;
+    height: 18rem;
+    left: -6rem;
+  }
+
+  .hero-outline-shape {
+    left: -4rem;
+  }
+}

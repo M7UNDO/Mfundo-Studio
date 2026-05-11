@@ -96,11 +96,29 @@
 }
 
 .hero-skills-footer {
-  position: absolute;
-  bottom: -15vh;
+  position: static;
+  margin-top: 5rem;
   display: flex;
-  gap: 2rem;
-  font-size: 0.9rem;
+  flex-wrap: wrap;
+  gap: 1rem 1.5rem;
+  font-size: 0.85rem;
   font-weight: 400;
-  letter-spacing: 2px;
+  letter-spacing: 1.5px;
+  max-width: 650px;
+}
+
+.hero-skills-footer span {
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .hero-skills-footer {
+    position: absolute;
+    bottom: -15vh;
+    margin-top: 0;
+    gap: 2rem;
+    font-size: 0.9rem;
+    letter-spacing: 2px;
+    max-width: none;
+  }
 }

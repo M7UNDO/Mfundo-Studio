@@ -31,6 +31,7 @@ export default function Home() {
   return (
     <div className="home-page" ref={container}>
       <section className="hero-section">
+        
         <div className="hero-content">
           <span className="hero-badge">Available for 2026/2027 roles</span>
 
