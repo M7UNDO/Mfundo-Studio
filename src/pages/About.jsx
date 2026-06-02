@@ -299,14 +299,61 @@ export default function About() {
         <div className="bottom-grid">
           <div className="skills-column">
             <h2 className="section-label">Technical Stack</h2>
-            <div className="skill-tags">
-              <span>JavaScript</span> <span>React JS</span> <span>CSS</span>
-              <span>HTML</span>
-              <span>Responsive Design</span> <span>3D Modelling</span> <span>Game Design</span>
-              <span>Graphic Design</span> <span>Figma</span> <span>Illustrator</span>
+
+            <div className="skills-group">
+              <h3>Front-End Development</h3>
+
+              <div className="skill-tags">
+                <span>HTML</span>
+                <span>CSS</span>
+                <span>JavaScript</span>
+                <span>TypeScript</span>
+                <span>React</span>
+                <span>GSAP</span>
+                <span>RESTful APIs</span>
+                <span>SEO Optimisation</span>
+                <span>Responsive Design</span>
+                <span>Web Accessibility</span>
+                <span>Git & GitHub</span>
+                <span>Interactive Media</span>
+              </div>
+            </div>
+
+            <div className="skills-group">
+              <h3>UI/UX Design</h3>
+
+              <div className="skill-tags">
+                <span>Interaction Design</span>
+                <span>User Flows</span>
+                <span>User Personas</span>
+                <span>Journey Mapping</span>
+                <span>Wireframing</span>
+                <span>High-Fidelity Prototyping</span>
+                <span>Information Architecture</span>
+                <span>Usability Testing</span>
+                <span>Design Systems</span>
+                <span>Typography</span>
+                <span>Colour Theory</span>
+                <span>Figma</span>
+                <span>Illustrator</span>
+              </div>
+            </div>
+
+            <div className="skills-group">
+              <h3>Game Development</h3>
+
+              <div className="skill-tags">
+                <span>Game Design</span>
+                <span>Unity</span>
+                <span>Unreal Engine</span>
+                <span>C#</span>
+                <span>C++</span>
+                <span>3D Modelling</span>
+                <span>Level Design</span>
+                <span>Sound Design</span>
+              </div>
             </div>
           </div>
-
           <div className="achievements-column">
             <h2 className="section-label">Achievements</h2>
             <div className="achievement-item">

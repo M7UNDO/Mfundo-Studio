@@ -51,22 +51,22 @@ export default function NorthstarCaseStudy() {
         <div className="case-meta-grid">
           <div>
             <span>Client</span>
-            <strong>Northstar Studios</strong>
+            <p>Northstar Studios</p>
           </div>
 
           <div>
             <span>Role</span>
-            <strong>UX/UI Designer & Front-End Developer</strong>
+            <p>UX/UI Designer & Front-End Developer</p>
           </div>
 
           <div>
             <span>Project Type</span>
-            <strong>E-Commerce Website / JavaScript Project</strong>
+            <p>E-Commerce Website / JavaScript Project</p>
           </div>
 
           <div>
             <span>Tools</span>
-            <strong>HTML, CSS, JavaScript, GSAP, Fake Store API, GitHub Pages</strong>
+            <p>HTML, CSS, JavaScript, GSAP, Fake Store API, GitHub Pages</p>
           </div>
         </div>
       </section>

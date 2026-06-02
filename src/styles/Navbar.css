@@ -69,23 +69,33 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 .logo {
   font-size: 1.4rem;
   font-family: var(--secondary-font);
-}
-
-
-.logo {
   height: 100%;
   width: fit-content;
   display: flex;
   align-items: center;
 }
 
-.logo img {
-  padding: 0.8rem;
-  height: 100%;
-  width: auto;
+.logo-icon {
+  width: 4rem;
+  height: 4rem;
 }
 
-.logo:hover img{
+.logo-text {
+  display: none;
+}
+
+[data-theme="dark"] .logo-icon {
+  fill: white;
+}
+[data-theme="light"] .logo-icon {
+  fill: black;
+}
+
+.logo:hover {
+  color: var(--accent-colour);
+}
+
+.logo:hover .logo-icon {
   fill: var(--accent-colour);
 }
 
@@ -239,5 +249,15 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
   .nav-social a:hover {
     transform: scale(1.1);
     color: var(--accent-colour);
+  }
+
+  .logo-icon{
+    width: 4rem;
+    height: 4rem;
+  }
+
+  .logo-text {
+    margin-left: 0.5rem;
+    display: block;
   }
 }

@@ -48,22 +48,22 @@ export default function LnaCaseStudy() {
         <div className="case-meta-grid">
           <div>
             <span>Client</span>
-            <strong>Ngengebule Attorneys Inc</strong>
+            <p>Ngengebule Attorneys Inc</p>
           </div>
 
           <div>
             <span>Role</span>
-            <strong>Web Designer & Front-End Developer</strong>
+            <p>Web Designer & Front-End Developer</p>
           </div>
 
           <div>
             <span>Project Type</span>
-            <strong>Business Website / Legal Services</strong>
+            <p>Business Website / Legal Services</p>
           </div>
 
           <div>
             <span>Tools</span>
-            <strong>React JS, JavaScript, HTML, CSS, GSAP</strong>
+            <p>React JS, JavaScript, HTML, CSS, GSAP</p>
           </div>
         </div>
       </section>

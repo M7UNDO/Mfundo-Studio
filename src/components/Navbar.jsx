@@ -3,8 +3,7 @@ import {NavLink, Link, useLocation} from "react-router-dom";
 import ThemeContext from "../context/ThemeContext";
 import ThemeToggle from "./ThemeToggle";
 import "../styles/Navbar.css";
-import logoBlack from "../assets/logos/Northstar Studios_Black.svg";
-import logoWhite from "../assets/logos/Northstar Studios_White.svg";
+import Logo from "../assets/logos/Northstar Studios_Black.svg?react";
 
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -35,8 +34,8 @@ export default function Navbar() {
     <header>
       <nav className="navbar">
         <Link to="/" className="logo">
-          <img src={theme === "light" ? logoBlack : logoWhite} alt="" />
-          Mfundo Dhlamini
+          <Logo className="logo-icon"/> 
+          <span className="logo-text">Mfundo Dhlamini</span>
         </Link>
 
         <div className={`nav-menu ${menuOpen ? "active" : ""}`}>

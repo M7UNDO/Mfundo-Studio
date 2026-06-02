@@ -6,9 +6,8 @@ export default function PortfolioDetail() {
 
   return (
     <>
-      <section className="project-hero">
+      <section className="page">
         <button className="back-btn"><i class="fa-solid fa-angles-left"></i>Back</button>
-        <p>UI/IX</p>
       </section>
     </>
   );

@@ -62,7 +62,7 @@
 .case-meta-grid div {
   padding: 2rem;
   border: 0.1rem solid var(--form-border);
-  border-radius: 2rem;
+  border-radius: 0.5rem;
   background: var(--form-bg);
   box-shadow: var(--normal-shadow);
 }
@@ -70,16 +70,14 @@
 .case-meta-grid span {
   display: block;
   margin-bottom: 0.8rem;
-  color: var(--label-colour);
-  font-family: var(--secondary-font);
+  color: var(--accent-colour);
   font-size: 1.2rem;
   font-weight: 800;
   letter-spacing: 0.1em;
   text-transform: uppercase;
 }
 
-.case-meta-grid strong {
-  color: var(--primary-colour);
+.case-meta-grid p {
   font-size: 1.5rem;
   line-height: 1.5;
 }
@@ -142,12 +140,10 @@
 }
 
 .section-content blockquote {
-  margin-bottom: 1rem;
-  padding: 2rem;
+  margin-bottom: 2rem;
+  padding:0 2rem;
   border-left: 0.4rem solid var(--accent-colour);
-  border-radius: 1.4rem;
   color: var(--primary-colour);
-  background: var(--form-bg);
   font-family: var(--secondary-font);
   font-size: clamp(1.9rem, 3vw, 2.6rem);
   line-height: 1.5;

@@ -23,7 +23,6 @@
   height: 100%;
   display: block;
   object-fit: cover;
-  
 }
 
 .about-badge {
@@ -129,11 +128,30 @@
   color: rgba(255, 255, 255, 0.4);
 }
 
-
 .bottom-container {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
+}
+
+.skills-column {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills-group {
+  padding: 2.5rem;
+  border: 0.1rem solid var(--background-colour-light);
+  border-radius: 1.6rem;
+  backdrop-filter: blur(1rem);
+}
+
+.skills-group h3 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.8rem;
+  color: var(--accent-colour);
 }
 
 .skill-tags {
@@ -143,12 +161,20 @@
 }
 
 .skill-tags span {
-  padding: 0.8rem 1.6rem;
-  background: rgba(127, 90, 255, 0.05);
-  border: 1px solid var(--accent-colour);
-  color: var(--accent-colour);
-  border-radius: 8px;
+  padding: 0.9rem 1.4rem;
+  background: rgba(127, 90, 255, 0.08);
+  border: 0.1rem solid rgba(127, 90, 255, 0.25);
+  border-radius: 10rem;
+  color: var(--typography-colour);
   font-size: 1.3rem;
+  transition: all 0.3s ease;
+}
+
+.skill-tags span:hover {
+  transform: translateY(-0.2rem);
+  border-color: var(--accent-colour);
+  background: var(--accent-colour);
+  color: #fff;
 }
 
 .achievement-item {

@@ -52,22 +52,22 @@ export default function AbsaCaseStudy() {
         <div className="case-meta-grid">
           <div>
             <span>Client</span>
-            <strong>ABSA Bank / Digital Arts Department</strong>
+            <p>ABSA Bank / Digital Arts Department</p>
           </div>
 
           <div>
             <span>Role</span>
-            <strong>Product Designer & Front-End Developer</strong>
+            <p>Product Designer & Front-End Developer</p>
           </div>
 
           <div>
             <span>Project Type</span>
-            <strong>UX Case Study / React MVP</strong>
+            <p>UX Case Study / React MVP</p>
           </div>
 
           <div>
             <span>Tools</span>
-            <strong>React JS, Javascript, HTML, CSS, GSAP, Recharts, Supabase Auth</strong>
+            <p>React JS, Javascript, HTML, CSS, GSAP, Recharts, Supabase Auth</p>
           </div>
         </div>
       </section>

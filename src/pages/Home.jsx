@@ -49,7 +49,7 @@ export default function Home() {
               View Projects
             </Link>
             <a
-              href="/Mfundo-Studio/cv/Mfundo-Dhlamini_CV.pdf"
+              href="/Mfundo-Studio/cv/Mfundo_Dhlamini_CV.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="cv-button secondary-btn"
