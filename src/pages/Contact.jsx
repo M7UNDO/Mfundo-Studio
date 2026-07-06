@@ -7,6 +7,7 @@ export default function Contact() {
   const container = useRef();
   const [errors, setErrors] = useState({});
   const [result, setResult] = useState("");
+  const access_key = import.meta.env.VITE_ACCESS_KEY;
 
   useGSAP(
     () => {
@@ -102,7 +103,7 @@ export default function Contact() {
 
     setResult("Sending...");
 
-    formData.append("access_key", "05f70f72-86b2-450a-a9d4-1992cbadb979");
+    formData.append("access_key", access_key);
 
     try {
       const response = await fetch("https://api.web3forms.com/submit", {
@@ -118,6 +119,7 @@ export default function Contact() {
         event.target.reset();
       } else {
         setResult("Something went wrong. Please try again.");
+        console.log("Web3Forms response:", data);
       }
     } catch (error) {
       setResult("Network error. Please try again.");
@@ -127,7 +129,7 @@ export default function Contact() {
   return (
     <section className="contact-page" ref={container}>
       <div className="contact-hero">
-        <span className="hero-badge">Get in Touch</span>
+        <span className="badge hero-badge">Get in Touch</span>
         <h1 className="hero-title">
           Lets build something <span>meaningful.</span>
         </h1>
@@ -139,53 +141,95 @@ export default function Contact() {
       </div>
 
       <div className="contact-form-wrapper">
+        <div className="contact-details">
+          <h2>Contact Details</h2>
+          <div>
+            <div className="icon-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-mail-icon lucide-mail"
+              >
+                <path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7" />
+                <rect x="2" y="4" width="20" height="16" rx="2" />
+              </svg>
+            </div>
+
+            <a href="mailto:dhlaminimfundo1@gmail.com">dhlaminimfundo1@gmail.com</a>
+          </div>
+          <div>
+            <div className="icon-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-phone-icon lucide-phone"
+              >
+                <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
+              </svg>
+            </div>
+
+            <a href="tel:+27829977500">+27 982 997 7500</a>
+          </div>
+          <div>
+            <div className="icon-bg">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                class="lucide lucide-map-pin-icon lucide-map-pin"
+              >
+                <path d="M20 10c0 4.993-5.539 10.193-7.399 11.799a1 1 0 0 1-1.202 0C9.539 20.193 4 14.993 4 10a8 8 0 0 1 16 0" />
+                <circle cx="12" cy="10" r="3" />
+              </svg>
+            </div>
+
+            <span>Johannesburg, South Africa</span>
+          </div>
+        </div>
         <form id="contact-form" onSubmit={handleSubmit} noValidate>
           <div className="form-row">
             <div className="form-group">
               <label htmlFor="first_name">First Name</label>
-              <input
-                type="text"
-                id="first_name"
-                name="first_name"
-                placeholder="John"
-                className="contact-input"
-              />
+              <input type="text" id="first_name" name="first_name" placeholder="John" className="contact-input" />
               {errors.first_name && <span className="error-message">{errors.first_name}</span>}
             </div>
 
             <div className="form-group">
               <label htmlFor="last_name">Last Name</label>
-              <input
-                type="text"
-                id="last_name"
-                name="last_name"
-                placeholder="Doe"
-                className="contact-input"
-              />
+              <input type="text" id="last_name" name="last_name" placeholder="Doe" className="contact-input" />
               {errors.last_name && <span className="error-message">{errors.last_name}</span>}
             </div>
           </div>
 
           <div className="form-group">
             <label htmlFor="email">Email Address</label>
-            <input
-              type="email"
-              id="email"
-              name="email"
-              placeholder="john@example.com"
-              className="contact-input"
-            />
+            <input type="email" id="email" name="email" placeholder="john@example.com" className="contact-input" />
             {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
 
           <div className="form-group">
             <label htmlFor="message">Message</label>
-            <textarea
-              id="message"
-              name="message"
-              placeholder="How can I help you?"
-              className="contact-input"
-            />
+            <textarea id="message" name="message" placeholder="How can I help you?" className="contact-input" />
             {errors.message && <span className="error-message">{errors.message}</span>}
           </div>
 

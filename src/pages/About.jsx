@@ -1,4 +1,6 @@
 import React, {useRef} from "react";
+import ExperienceCard from "../components/ExperienceCard";
+import AchievementCard from "../components/AchievementCard";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import {ScrollTrigger} from "gsap/ScrollTrigger";
@@ -8,6 +10,104 @@ import profileImg from "../assets/profile/M7UNDO_Pfp.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+  const experienceData = [
+    {
+      id: 0,
+      client: "Ngengebule Attorneys Inc",
+      role: "Front-end Developer, UI/UX Designer",
+      date: "Jan 2026 - Mar 2026",
+      description:
+        "Built a fully responsive React website from concept to deployment, translating business requirements into an accessible digital experience. Working directly with the firm's directors, I delivered a scalable solution that strengthened its online presence through reusable architecture, responsive design, and SEO-conscious development.",
+    },
+    {
+      id: 1,
+      client: "Lesakhi Investments",
+      role: "Graphic Designer",
+      date: "Jan 2026 - Mar 2026",
+      description:
+        "Established Lesakhi Investments' visual identity by creating its logo, stationery, and marketing assets. Collaborating directly with stakeholders, I developed a cohesive brand system that reflected the company's values and strengthened its professional presence.",
+    },
+    {
+      id: 2,
+      client: "Rahul Solutions",
+      role: "Front-end Developer, Graphic Designer, 3D Modeller",
+      date: "Jan 2023 - Dec 2025",
+      description:
+        "Developed custom front-end solutions for WordPress and Elementor projects while producing branding and 3D visualisations for commercial clients. From interactive websites to industrial environments, I combined technical implementation with creative problem-solving to deliver polished digital experiences.",
+    },
+    {
+      id: 3,
+      client: "L&D Academy",
+      role: "Graphic Designer",
+      date: "2023 - 2024",
+      description:
+        "Created the organisation's visual identity through logo design, stationery, and branded marketing assets, establishing a consistent visual language across digital and print communications.",
+    },
+  ];
+
+  const achievementData = [
+    {
+      id: 0,
+      achievement: "Golden Key Honour Society",
+      institution: "University of the Witwatersrand",
+      date: "2024",
+    },
+    {
+      id: 1,
+      achievement: "Certificate of First Class - AFRL1003A • Elementary isiZulu Language and Culture IA",
+      institution: "University of the Witwatersrand",
+      date: "2023",
+    },
+    {
+      id: 2,
+      achievement: "Certificate of First Class - AFRL1004A • Elementary isiZulu Language and Culture IB",
+      institution: "University of the Witwatersrand",
+      date: "2023",
+    },
+    {
+      id: 3,
+      achievement: "Certificate of First Class - WSOA1003A • Film, Visual and Performing Arts IB",
+      institution: "University of the Witwatersrand",
+      date: "2023",
+    },
+    {
+      id: 4,
+      achievement: "Certificate of First Class - WSOA2021A • Storytelling Across Media and Cultural Contexts",
+      institution: "University of the Witwatersrand",
+      date: "2024",
+    },
+    {
+      id: 5,
+      achievement: "Certificate of First Class - WSOA2023A • Digital Arts Practice II",
+      institution: "University of the Witwatersrand",
+      date: "2024",
+    },
+    {
+      id: 6,
+      achievement: "Certificate of First Class - WSOA2024A • Game Design IIA",
+      institution: "University of the Witwatersrand",
+      date: "2024",
+    },
+    {
+      id: 7,
+      achievement: "Vega Flair in Design Trophy",
+      institution: "Krugersdorp High School, Vega School",
+      date: "2022",
+    },
+    {
+      id: 8,
+      achievement: "Matric Top Design Student",
+      institution: "Krugersdorp High School",
+      date: "2022",
+    },
+    {
+      id: 9,
+      achievement: "Matric Top 20 (6th Place)",
+      institution: "Krugersdorp High School",
+      date: "2022",
+    },
+  ];
+
   const container = useRef();
 
   useGSAP(
@@ -36,6 +136,22 @@ export default function About() {
         },
       )
         .fromTo(
+          ".profile",
+          {
+            opacity: 0,
+            x: 40,
+            scale: 0.96,
+          },
+          {
+            opacity: 1,
+            x: 0,
+            scale: 1,
+            duration: 1,
+            ease: "power4.out",
+          },
+          "-=0.25",
+        )
+        .fromTo(
           ".about-title",
           {
             opacity: 0,
@@ -48,6 +164,7 @@ export default function About() {
           },
           "-=0.35",
         )
+
         .fromTo(
           ".bio-text p",
           {
@@ -76,22 +193,6 @@ export default function About() {
             duration: 0.75,
           },
           "-=0.25",
-        )
-        .fromTo(
-          ".profile",
-          {
-            opacity: 0,
-            x: 40,
-            scale: 0.96,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            duration: 1,
-            ease: "power4.out",
-          },
-          "-=1",
         )
 
         // =========================
@@ -165,10 +266,6 @@ export default function About() {
           "-=0.3",
         )
 
-        // =========================
-        // ACHIEVEMENTS SECTION
-        // =========================
-
         .fromTo(
           ".achievements-column .section-label",
           {
@@ -206,35 +303,31 @@ export default function About() {
       <div className="about-content">
         <div className="about-intro">
           <div>
-            <span className="about-badge">The Narrative</span>
+            <span className="about-badge">About me</span>
             <h1 className="about-title">
               Experience & <span>Expertise.</span>
             </h1>
 
             <div className="bio-text">
               <p>
-                Honours Digital Arts student majoring in <strong>Game Design</strong> and{" "}
-                <strong>Interactive Media</strong>, with hands-on experience in{" "}
-                <strong>front-end web development</strong>, <strong>UI</strong> and <strong>UX design</strong>, and
-                creating thoughtful, brand-driven digital solutions.
+                I'm a final-year Digital Arts student at the University of the Witwatersrand, majoring in Interactive
+                Media and Game Design. Over the past few years, I've discovered that what I enjoy most is building
+                digital products that solve real problems while creating experiences people genuinely enjoy using.
               </p>
 
               <p>
-                I enjoy working at the intersection of design and technology, where visuals, interaction, and code come
-                together to create experiences that feel intuitive, intentional, and engaging.
+                My journey started with HTML, CSS and JavaScript, where I developed a strong appreciation for clean code
+                and thoughtful user interfaces. Since then, I've expanded into React development, UX design and product
+                design, working on both commercial client projects and university products from research and planning
+                through to implementation.
               </p>
 
               <p>
-                My background in game design shapes the way I approach digital experiences. I naturally think in
-                systems, flows, and user journeys, understanding that every interaction matters. Beyond the technical
-                side, I enjoy solving problems creatively, collaborating with others, and continuously refining my
-                craft.
+                What motivates me isn't just building something that works. I enjoy understanding the people I'm
+                designing for, the business challenges behind a product, and how thoughtful design and technology can
+                come together to create something meaningful. That's what continues to push me to learn, improve, and
+                refine my craft every day.
               </p>
-
-              <blockquote>
-                “Success is when reality catches up to your imagination.”
-                <cite>— Simon Sinek</cite>
-              </blockquote>
             </div>
           </div>
           <div>
@@ -243,56 +336,18 @@ export default function About() {
         </div>
 
         <div className="experience-grid">
-          <h2 className="section-label">Professional Experience</h2>
+          <h3 className="section-label">Freelance Projects</h3>
 
           <div className="experience-list">
-            <div className="experience-card active">
-              <div className="card-header">
-                <h3>Ngengebule Attorneys Inc</h3>
-                <span className="date">Dec 2025 - Present</span>
-              </div>
-              <h4>Front-End Web Developer / UI/UX Designer (Freelance)</h4>
-              <p>
-                Developed responsive, SEO-optimized web solutions and brand-aligned assets for professional legal
-                services.
-              </p>
-            </div>
-
-            <div className="experience-card active">
-              <div className="card-header">
-                <h3>Lesakhi Investments</h3>
-                <span className="date">Jan 2026 - Present</span>
-              </div>
-              <h4>Front-End Web Developer / Graphic Designer (Freelance)</h4>
-              <p>
-                Crafting full-spectrum brand identity from logo design to responsive web development and audience
-                engagement.
-              </p>
-            </div>
-
-            <div className="experience-card">
-              <div className="card-header">
-                <h3>Rahul Solutions</h3>
-                <span className="date">2023 - 2025</span>
-              </div>
-              <h4>Developer / Designer / 3D Modeler (Freelance)</h4>
-              <p>
-                Integrated 3D modeling with web development to establish cohesive digital identities and professional
-                presentation.
-              </p>
-            </div>
-
-            <div className="experience-card">
-              <div className="card-header">
-                <h3>L&D Academy</h3>
-                <span className="date">2023 - 2024</span>
-              </div>
-              <h4>Graphic Designer (Freelance)</h4>
-              <p>
-                Built visual identities from the ground up, ensuring brand mission and values resonated with target
-                audiences.
-              </p>
-            </div>
+            {experienceData.map((experience) => (
+              <ExperienceCard
+                key={experience.id}
+                client={experience.client}
+                date={experience.date}
+                role={experience.role}
+                description={experience.description}
+              />
+            ))}
           </div>
         </div>
 
@@ -356,29 +411,15 @@ export default function About() {
           </div>
           <div className="achievements-column">
             <h2 className="section-label">Achievements</h2>
-            <div className="achievement-item">
-              <strong>BA Digital Arts</strong>
-              <p>Current Education: University of the Witwatersrand</p>
-            </div>
-            <div className="achievement-item">
-              <strong>6x Wits Certificate of First Class</strong>
-              <p>University of the Witwatersrand</p>
-            </div>
-            <div className="achievement-item">
-              <strong>Golden Key Honor Society</strong>
-              <p>Golden Key: Wits University (2024)</p>
-            </div>
-            <div className="achievement-item">
-              <strong>Vega School Design Trophy</strong>
-              <p>Vega School Trophy for Flair in Design (2022)</p>
-            </div>
-            <div className="achievement-item">
-              <strong>Top Design Student</strong>
-              <p>Krugersdorp High (2022)</p>
-            </div>
-            <div className="achievement-item">
-              <strong>Matric Top 20</strong>
-              <p>6th Place - Krugersdorp High (2022)</p>
+            <div className="achievement-list">
+              {achievementData.map((achievement) => (
+                <AchievementCard
+                  key={achievement.id}
+                  achievement={achievement.achievement}
+                  date={achievement.date}
+                  institution={achievement.institution}
+                />
+              ))}
             </div>
           </div>
         </div>

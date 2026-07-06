@@ -70,22 +70,40 @@
   flex-wrap: wrap;
 }
 
-.design-format-tag {
+.design-card-meta .project-badge {
   display: inline-flex;
   align-items: center;
   justify-content: center;
-
-  padding: 0.45rem 0.9rem;
-
-  border: 0.1rem solid var(--form-border);
+  padding: 0.7rem 1.5rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
   border-radius: 999rem;
+  background: var(--accent-colour);
+  color: white;
+  font-size: 1.05rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  backdrop-filter: blur(1rem);
+}
 
-  background: var(--background-colour-light);
-
-  color: var(--primary-transparent);
-
+.design-card-meta .design-format-tag {
   font-size: 0.95rem;
   font-weight: 700;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.7rem 1.5rem;
+  border: 1px solid var(--typography-colour);
+  border-radius: 999rem;
+  background: var(--background-colour);
+  color: var(--typography-colour);
+  opacity: 0.8;
+  transition: all 0.25s ease;
+}
+
+.design-card-meta .design-format-tag:hover{
+  opacity: 1;
+  transform: translateY(-0.1rem);
 }

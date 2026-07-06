@@ -36,7 +36,7 @@ export default function DesignCard({src, lightSrc, darkSrc, title, category, typ
 
         <div className="design-card-info">
           <div className="design-card-meta">
-            <span>{category}</span>
+            <span className="project-badge">{category}</span>
 
             <span className="design-format-tag">{type.toUpperCase()}</span>
           </div>

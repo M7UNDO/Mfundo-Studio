@@ -10,7 +10,7 @@ const projectData = [
     description:
       "Designing and developing a responsive financial planning web application prototype that enables young South African professionals to better understand and manage their finances through interactive simulations, personalised strategy tracks, and real-time insights, while integrating educational content to support informed decision-making.",
     info: "Website",
-    liveLink: "https://m7undo.github.io/absa-nextgen-wealth/",
+    liveLink: "https://m7undo.github.io/absa-nextgen-wealth/#/strategy-tracks",
     githubLink: "https://github.com/M7UNDO/absa-nextgen-wealth",
     tools: [
       "React JS",

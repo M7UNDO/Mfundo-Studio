@@ -4,7 +4,6 @@ header {
   height: 5rem;
   width: 100%;
   z-index: 99;
-  background: none;
 }
 
 .navbar {
@@ -13,16 +12,7 @@ header {
   justify-content: space-between;
   align-items: center;
   padding: 0 1rem;
-  background-color: var(--background-colour);
   transition: all 0.3s ease;
-}
-
-html[data-theme="light"] .navbar.navbar-scrolled {
-  background-color: rgb(235, 235, 237);
-}
-
-html[data-theme="dark"] .navbar.navbar-scrolled {
-  background-color: rgb(13, 13, 13);
 }
 
 .nav-menu {
@@ -81,7 +71,11 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
 }
 
 .logo-text {
+  font-family: var(--primary-font);
+  font-size: 1.3rem;
   display: none;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
 }
 
 [data-theme="dark"] .logo-icon {
@@ -159,12 +153,22 @@ html[data-theme="dark"] .navbar.navbar-scrolled {
   padding: 0 2rem;
 }
 
+.mobile-actions{
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+
 @media screen and (min-width: 768px) {
   .navbar {
     height: 6rem;
-    backdrop-filter: blur(10px);
   }
   .menu-btn {
+    display: none;
+  }
+
+  .mobile-actions{
     display: none;
   }
 

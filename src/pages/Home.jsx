@@ -3,6 +3,8 @@ import {Link} from "react-router-dom";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import "../styles/Home.css";
+import StarfieldBackground from "../components/StarfieldBackground"
+
 
 export default function Home() {
   const container = useRef();
@@ -31,7 +33,6 @@ export default function Home() {
   return (
     <div className="home-page" ref={container}>
       <section className="hero-section">
-        
         <div className="hero-content">
           <span className="hero-badge">Available for 2026/2027 roles</span>
 
@@ -40,8 +41,8 @@ export default function Home() {
           </h1>
 
           <p className="hero-description">
-            Designing and developing immersive digital experiences through the intersection of{" "}
-            <strong>UI/UX Design</strong>, <strong>Front-End Development</strong>, and <strong>Game Design</strong>.
+            Designing and developing immersive digital experiences through the intersection of UI/UX Design, Front-End
+            Development, and Game Design.
           </p>
 
           <div className="hero-cta">
@@ -54,18 +55,15 @@ export default function Home() {
               rel="noopener noreferrer"
               className="cv-button secondary-btn"
             >
-              View CV
+              View Resume
             </a>
           </div>
         </div>
 
         <div className="hero-skills-footer">
-          <span>React</span>
-          <span>JavaScript</span>
           <span>UI/UX Design</span>
           <span>Front-End Development</span>
           <span>Game Design</span>
-          <span>GSAP</span>
         </div>
       </section>
     </div>

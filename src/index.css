@@ -1,18 +1,20 @@
 :root {
-  /* Brand Colours */
   --accent-colour: #7f5aff;
   --accent-colour-hover: #a890ff;
 
-  /* Typography */
   --primary-font: "Roboto", sans-serif;
   --secondary-font: "Manrope", sans-serif;
+  --sans: ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", Segoe UI Symbol, "Noto Color Emoji";;
+  --badge-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
+    "Liberation Mono", "Courier New", monospace;
 
-  /* Default Theme: Dark */
-  --background-colour: rgb(13, 13, 13);
-  --background-colour-light: rgb(41, 39, 52);
+  --nav-colour: #0a192f50;
+  --background-colour:  rgb(10 25 47);
+  --background-colour-light: rgb(17 34 64);
   --primary-colour: rgb(255, 255, 255);
   --primary-transparent: rgba(255, 255, 255, 0.4);
   --typography-colour: rgb(230, 226, 236);
+  --typography-colour-light: rgb(230, 226, 236);
 
   --form-bg: rgba(255, 255, 255, 0.03);
   --form-border: rgba(255, 255, 255, 0.08);
@@ -20,32 +22,45 @@
   --label-colour: rgba(255, 255, 255, 0.5);
   --normal-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.04);
   --hard-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
+  --light-border: rgba(128, 128, 128, 0.2);
 }
 
 [data-theme="light"] {
+  --accent-colour: #7f5aff;
+  --accent-colour-hover: #a890ff;
+  
+  --nav-colour: #ebebed50;
   --background-colour: rgb(235, 235, 237);
   --background-colour-light: rgb(255, 255, 255);
   --primary-colour: rgb(0, 0, 0);
   --primary-transparent: rgba(0, 0, 0, 0.4);
   --typography-colour: rgb(40, 40, 40);
+  --typography-colour-light: rgb(0, 0, 0);
 
   --form-bg: rgba(0, 0, 0, 0.02);
   --form-border: rgba(128, 128, 128, 0.37);
   --input-bg: rgba(255, 255, 255, 0.8);
   --label-colour: rgba(0, 0, 0, 0.6);
+  --light-border: rgba(128, 128, 128, 0.2);
 }
 
 [data-theme="dark"] {
-  --background-colour: rgb(13, 13, 13);
-  --background-colour-light: rgb(41, 39, 52);
+  --accent-colour: #6a41ff;
+  --accent-colour-hover: #a890ff;
+
+  --nav-colour: #0a192fc8;
+  --background-colour:  rgb(10 25 47);
+  --background-colour-light: rgb(17 34 64);
   --primary-colour: rgb(230, 226, 236);
   --primary-transparent: rgba(255, 255, 255, 0.4);
-  --typography-colour: rgb(230, 226, 236);
+  --typography-colour: rgb(179, 189, 217);
+  --typography-colour-light: rgb(255, 255, 255);
 
   --form-bg: rgba(255, 255, 255, 0.03);
   --form-border: rgba(255, 255, 255, 0.08);
   --input-bg: rgba(0, 0, 0, 0.2);
   --label-colour: rgba(255, 255, 255, 0.5);
+  --light-border: rgba(128, 128, 128, 0.35);
 }
 
 html {
@@ -81,4 +96,8 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+.badge{
+  font-family: var(--badge-font);
 }
