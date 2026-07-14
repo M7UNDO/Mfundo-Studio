@@ -1,7 +1,7 @@
 .about-section {
   width: 100%;
   min-height: 100vh;
-  padding: 10rem 2rem 5rem;
+  padding: 6rem 1.5rem 4rem;
   display: flex;
   justify-content: center;
 }
@@ -96,6 +96,7 @@
 .skills-tabs {
   display: flex;
   gap: 0.5rem;
+  flex-wrap: wrap;
 }
 
 .tab-btn {
@@ -105,17 +106,16 @@
   font-weight: 500;
   padding: 1rem 1.5rem;
   outline: none;
-  background: var(--background-colour-light);
+  background: var(--background-colour);
   border: 1px solid var(--typography-colour);
   border-radius: 0.5rem;
-  background: var(--background-colour);
   color: var(--typography-colour);
   transition: all 0.2s ease;
 }
 
 .tab-btn:hover {
   transform: translateY(-3px);
-  background:transparent;
+  background: transparent;
   border-color: var(--accent-colour);
   color: var(--accent-colour);
 }
@@ -125,7 +125,6 @@
   border-color: var(--accent-colour);
   color: white;
 }
-
 
 .skills-column {
   display: flex;
@@ -167,9 +166,8 @@
   transition: all 0.3s ease;
 }
 
-[data-theme="dark"] .skill-tags span{
+[data-theme="dark"] .skill-tags span {
   border: 0.1rem solid rgba(220, 220, 220, 0.16);
-
 }
 
 .skill-tags span:hover {
@@ -192,6 +190,10 @@
 }
 
 @media (min-width: 768px) {
+  .about-section {
+    padding: 10rem 2rem 5rem;
+  }
+
   .about-intro {
     flex-direction: row;
     align-items: center;

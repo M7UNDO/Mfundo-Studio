@@ -1,7 +1,7 @@
 header {
   position: sticky;
   top: 0;
-  height: 5rem;
+  height: 7rem;
   width: 100%;
   z-index: 99;
 }
@@ -106,7 +106,7 @@ header {
 .menu-lines {
   position: relative;
   display: block;
-  width: 2.5rem;
+  width: 2.2rem;
   height: 1.5px;
   outline: none;
   background: var(--typography-colour);
@@ -117,7 +117,7 @@ header {
 .menu-lines::before {
   content: "";
   position: absolute;
-  width: 2.5rem;
+  width: 2.2rem;
   height: 1.5px;
   background: var(--typography-colour);
   left: 0;

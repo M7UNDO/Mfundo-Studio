@@ -30,6 +30,7 @@
   background-color: var(--accent-colour-hover);
 }
 
-.back-to-top-btn i {
+.back-to-top-btn i, .back-to-top-btn svg {
+  stroke-width: 2px;
   pointer-events: none;
 }

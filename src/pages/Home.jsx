@@ -4,7 +4,6 @@ import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import "../styles/Home.css";
 
-
 export default function Home() {
   const container = useRef();
 
@@ -40,8 +39,8 @@ export default function Home() {
           </h1>
 
           <p className="hero-description">
-            Designing and developing immersive digital experiences through the intersection of UI/UX Design, Front-End
-            Development, and Game Design.
+            Transforming ideas into thoughtful digital experiences that are intuitive, engaging, and built with people
+            at the center. Final-year Honors Digital Arts student at the University of the Witwatersrand.
           </p>
 
           <div className="hero-cta">

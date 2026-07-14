@@ -1,5 +1,5 @@
 import React from "react";
-import {Link} from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../styles/Footer.css";
 import Logo from "../assets/logos/Northstar Studios_Black.svg?react";
 
@@ -8,35 +8,46 @@ function Footer() {
     <footer className="footer">
       <div className="footer-container">
         <div className="footer-top">
-          <Link className="footer-brand" to="/">
-            <Logo className="footer-logo" />
-          </Link>
+          <div className="footer-brand">
+            <Link className="footer-brand-link" to="/">
+              <Logo className="footer-logo" />
+            </Link>
+          </div>
 
-          <div className="footer-im-projects">
+          <div className="footer-column">
             <h4>Interactive Media</h4>
             <ul>
               <li>
-                <Link>ABSA New Wealth Studio</Link>
+                <Link to="/portfolio/absa">ABSA New Wealth Studio</Link>
               </li>
               <li>
-                <Link>The Pavillion</Link>
+                <Link to="/portfolio/northstar-shop">Northstar Studios Shop</Link>
+              </li>
+              <li>
+                <Link to="/portfolio/pavillion">The Pavillion</Link>
               </li>
             </ul>
           </div>
 
-          <div className="footer-gd-projects">
+          <div className="footer-column">
             <h4>Game Design</h4>
             <ul>
               <li>
-                <Link>Grave Wave</Link>
+                <Link to="/portfolio/grave-wave">Grave Wave</Link>
               </li>
               <li>
-                <Link>Heist Gambit</Link>
+                <Link to="/portfolio/heist-gambit">Heist Gambit</Link>
+              </li>
+              <li>
+                <Link to="/portfolio/heist-gambit">Hole In One</Link>
+              </li>
+              <li>
+                <Link to="/portfolio/heist-gambit">The Lost Temple</Link>
               </li>
             </ul>
           </div>
 
-          <div className="quick-links">
+          <div className="footer-column">
             <h4>Quick Links</h4>
             <ul>
               <li>
@@ -54,22 +65,22 @@ function Footer() {
             </ul>
           </div>
 
-          <div className="footer-social">
+          <div className="footer-column">
             <h4>Connect</h4>
             <div className="social-icons">
-              <a href="https://www.linkedin.com/in/mfundo-dhlamini" target="_blank" rel="noopener noreferrer">
-                <i class="fa-brands fa-linkedin-in"></i>
+              <a href="https://www.linkedin.com/in/mfundo-dhlamini" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <i className="fa-brands fa-linkedin-in"></i>
               </a>
-              <a href="mailto:dhlaminimfundo1@gmail.com" target="_blank" rel="noopener noreferrer">
-                <i class="fa-solid fa-envelope"></i>
+              <a href="mailto:dhlaminimfundo1@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email">
+                <i className="fa-solid fa-envelope"></i>
               </a>
             </div>
           </div>
         </div>
-      </div>
 
-      <div className="footer-bottom">
-        <p>&copy; {new Date().getFullYear()} Mfundo Dhlamini. All rights reserved.</p>
+        <div className="footer-bottom">
+          <p>&copy; {new Date().getFullYear()} Mfundo Dhlamini. All rights reserved.</p>
+        </div>
       </div>
     </footer>
   );

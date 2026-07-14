@@ -29,7 +29,7 @@
 }
 
 [data-theme="light"] {
-  --accent-colour: #754fff;
+  --accent-colour: #724bff;
   --accent-colour-hover: #a890ff;
   
   --nav-colour: #ebebed50;
@@ -54,7 +54,7 @@
 
   --nav-colour: #0b162950;
   --background-colour: rgb(11, 20, 34);
-  --background-colour-dark: rgb(11, 22, 41);
+  --background-colour-dark: rgb(6, 13, 23);
   --background-colour-light: rgb(26, 38, 59);
   --primary-colour: rgb(230, 226, 236);
   --primary-transparent: rgba(255, 255, 255, 0.4);
@@ -65,7 +65,7 @@
   --form-border: rgba(255, 255, 255, 0.08);
   --input-bg: rgba(0, 0, 0, 0.2);
   --label-colour: rgba(255, 255, 255, 0.5);
-  --light-border: rgba(128, 128, 128, 0.35);
+  --light-border: rgba(84, 78, 129, 0.35);
 }
 
 html {

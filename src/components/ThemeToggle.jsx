@@ -146,8 +146,7 @@ export default function ThemeToggle() {
       className="theme-btn"
       onClick={toggleTheme}
     >
-      {/* SUN */}
-      <svg
+      <svg className="theme-icon"
         ref={sunRef}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"
@@ -168,8 +167,7 @@ export default function ThemeToggle() {
         <path d="m19.07 4.93-1.41 1.41" />
       </svg>
 
-      {/* MOON */}
-      <svg
+      <svg className="theme-d"
         ref={moonRef}
         xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 24 24"

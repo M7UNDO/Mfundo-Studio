@@ -25,7 +25,6 @@ export default function InteractiveMediaPortfolio() {
 
           <div className="heading">
             <h2>Web & Interactive Projects</h2>
-            <div className="section-divider"></div>
           </div>
 
           <p>
