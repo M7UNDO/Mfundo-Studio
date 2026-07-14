@@ -61,7 +61,7 @@
 }
 
 .bio-text p {
-  font-family: var(--secondary-font);
+  font-family: var(--sans);
   font-size: 1.6rem;
   line-height: 1.6;
   margin-bottom: 2rem;

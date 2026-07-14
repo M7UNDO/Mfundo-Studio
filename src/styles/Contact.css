@@ -78,7 +78,7 @@
 
 .icon-bg{
   padding: 1rem;
-  background-color: var(--background-colour-light);
+  background-color: var(--icon-bg);
   border-radius: 0.5rem;
 }
 

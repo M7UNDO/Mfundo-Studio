@@ -106,7 +106,21 @@ export default function About() {
       institution: "Krugersdorp High School",
       date: "2022",
     },
+    {
+      id: 9,
+      achievement: "The Campus Game Jam - Runner Up",
+      institution: "University of The Witwatersrand",
+      date: "2026",
+    },
+    {
+      id: 9,
+      achievement: "The Campus Game Jam - Community Favourite Winner",
+      institution: "University of The Witwatersrand",
+      date: "2026",
+    },
   ];
+
+  const sortedAchievements =  [...achievementData].sort((a,b)=>(b.date.localeCompare(a.date)));
 
   const container = useRef();
 
@@ -119,9 +133,6 @@ export default function About() {
         },
       });
 
-      // =========================
-      // HERO / INTRO
-      // =========================
 
       tl.fromTo(
         ".about-badge",
@@ -230,9 +241,6 @@ export default function About() {
           "-=0.2",
         )
 
-        // =========================
-        // SKILLS SECTION
-        // =========================
 
         .fromTo(
           ".skills-column .section-label",
@@ -412,7 +420,7 @@ export default function About() {
           <div className="achievements-column">
             <h2 className="section-label">Achievements</h2>
             <div className="achievement-list">
-              {achievementData.map((achievement) => (
+              {sortedAchievements.map((achievement) => (
                 <AchievementCard
                   key={achievement.id}
                   achievement={achievement.achievement}

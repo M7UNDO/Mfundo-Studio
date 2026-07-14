@@ -3,7 +3,6 @@ import {Link} from "react-router-dom";
 import {gsap} from "gsap";
 import {useGSAP} from "@gsap/react";
 import "../styles/Home.css";
-import StarfieldBackground from "../components/StarfieldBackground"
 
 
 export default function Home() {

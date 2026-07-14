@@ -1,9 +1,17 @@
 .footer {
-  background-color: rgb(28, 28, 30);
+  background-color: var(--background-colour-dark);
   color: white;
-  font-family: var(--secondary-font);
   padding: 3rem 5%;
-  border-top: 0.1rem solid rgba(255, 255, 255, 0.1);
+  border-top: 0.1rem solid rgba(255, 255, 255, 0.15);
+}
+
+[data-theme="light"] .footer{
+    border-color: rgba(0, 0, 0, 0.1);
+}
+
+[data-theme="light"] .footer{
+    background-color: var(--background-colour);
+    color: var(--typography-colour);
 }
 
 .footer-brand {
@@ -15,6 +23,10 @@
 .footer-logo {
   width: 7rem;
   fill: white;
+}
+
+[data-theme="light"] .footer-logo{
+    fill: black;
 }
 
 .footer-container {
@@ -29,6 +41,10 @@
   border-bottom: 0.1rem solid rgba(255, 255, 255, 0.15);
 }
 
+[data-theme="light"] .footer-top {
+  border-color: rgba(0, 0, 0, 0.15);
+}
+
 .footer-tagline {
   font-size: 1.4rem;
   color: white;
@@ -40,6 +56,8 @@
   font-family: var(--numbers-font);
   margin-bottom: 1.2rem;
 }
+
+
 
 .footer-top ul {
   list-style: none;
@@ -53,9 +71,9 @@
 
 .footer-top a {
   text-decoration: none;
-  color: rgb(199, 199, 199);
   font-size: 1.4rem;
   transition: color 0.3s ease;
+  color: var(--typography-colour);
 }
 
 .footer-top a.logo {
@@ -70,7 +88,7 @@
 }
 
 .footer-top a:hover {
-  color: white;
+  color: var(--accent-colour);
 }
 
 .social-icons {
@@ -92,7 +110,6 @@
 
 .footer-bottom p {
   font-size: 1.2rem;
-  color: rgba(230, 230, 230, 0.7);
 }
 
 @media screen and (min-width: 768px) {

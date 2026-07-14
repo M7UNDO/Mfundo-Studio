@@ -9,18 +9,21 @@
     "Liberation Mono", "Courier New", monospace;
 
   --nav-colour: #0a192f50;
-  --background-colour:  rgb(10 25 47);
+  --background-colour:  rgb(11, 22, 41);;
   --background-colour-light: rgb(17 34 64);
+  --background-colour-dark: rgb(11, 22, 41);
   --primary-colour: rgb(255, 255, 255);
   --primary-transparent: rgba(255, 255, 255, 0.4);
   --typography-colour: rgb(230, 226, 236);
   --typography-colour-light: rgb(230, 226, 236);
+  --icon-bg: #7e5aff2f;
 
   --form-bg: rgba(255, 255, 255, 0.03);
   --form-border: rgba(255, 255, 255, 0.08);
   --input-bg: rgba(0, 0, 0, 0.2);
   --label-colour: rgba(255, 255, 255, 0.5);
   --normal-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.06), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.04);
+  --soft-shadow: box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1);
   --hard-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.08), 0 0.2rem 0.8rem rgba(0, 0, 0, 0.2);
   --light-border: rgba(128, 128, 128, 0.2);
 }
@@ -32,6 +35,7 @@
   --nav-colour: #ebebed50;
   --background-colour: rgb(235, 235, 237);
   --background-colour-light: rgb(255, 255, 255);
+  --background-colour-dark: rgb(240, 240, 240);
   --primary-colour: rgb(0, 0, 0);
   --primary-transparent: rgba(0, 0, 0, 0.4);
   --typography-colour: rgb(40, 40, 40);
@@ -49,8 +53,9 @@
   --accent-colour-hover: #a890ff;
 
   --nav-colour: #0a192fc8;
-  --background-colour:  rgb(10 25 47);
-  --background-colour-light: rgb(17 34 64);
+  --background-colour: rgb(11, 20, 34);
+  --background-colour-dark: rgb(11, 22, 41);
+  --background-colour-light: rgb(26, 38, 59);
   --primary-colour: rgb(230, 226, 236);
   --primary-transparent: rgba(255, 255, 255, 0.4);
   --typography-colour: rgb(179, 189, 217);

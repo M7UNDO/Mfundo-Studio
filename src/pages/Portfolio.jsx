@@ -4,6 +4,7 @@ import {useGSAP} from "@gsap/react";
 
 import InteractiveMediaPortfolio from "../components/InteractiveMediaPortfolio";
 import GameDevelopmentPortfolio from "../components/GameDevelopmentPortfolio";
+import BackToTop from "../components/BackToTop";
 import "../styles/Portfolio.css";
 
 export default function Portfolio() {
@@ -102,6 +103,7 @@ export default function Portfolio() {
 
       {selectedTab === "interactive-media" && <InteractiveMediaPortfolio />}
       {selectedTab === "game-development" && <GameDevelopmentPortfolio />}
+      <BackToTop/>
     </div>
   );
 }
