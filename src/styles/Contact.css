@@ -144,7 +144,7 @@ span {
   background: var(--input-bg);
   border: 1px solid var(--form-border);
   border-radius: 12px;
-  padding: 1.2rem;
+  padding: 1.3rem;
   color: var(--typography-colour);
   font-family: inherit;
   transition: all 0.3s ease;
@@ -156,11 +156,6 @@ span {
   color: transparent;
 }
 
-#contact-form input:focus .form-group label,
-#contact-form textarea .form-group label {
-  color: var(--accent-colour);
-}
-
 #contact-form .contact-input:hover {
   border-color: var(--accent-colour);
 }
@@ -170,7 +165,7 @@ span {
   outline: none;
   border-color: var(--accent-colour);
   background: var(--background-colour-light);
-  box-shadow: 0 0 20px rgba(127, 90, 255, 0.15);
+  padding: 1.3rem;
 }
 
 #message {
