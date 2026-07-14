@@ -1,6 +1,7 @@
 import absaCover from "../assets/images/covers/Absa_NextGen.svg";
 import lnaCover from "../assets/images/covers/LNA_Web.svg";
 import northstarCover from "../assets/images/covers/northstar_shop.svg";
+import pavillionCover from "../assets/images/covers/fakeStore.png";
 
 const projectData = [
   {
@@ -37,7 +38,7 @@ const projectData = [
     img: northstarCover,
     title: "Fake Store API Integration",
     description:
-      "This project is an e-commerce website that integrates the Fake Store REST API along with custom products. It includes dynamic product loading, cart logic, and a complete front-end interface representing my brand.",
+      "This project is an e-commerce website that integrates the Fake Store REST API along with custom products. It includes dynamic product loading, cart logic, and a complete front-end interface.",
     info: "Website",
     liveLink: "https://m7undo.github.io/Shop-Northstar-Studios/",
     githubLink: "https://github.com/M7UNDO/Shop-Northstar-Studios",
@@ -46,8 +47,27 @@ const projectData = [
       "GSAP",
       "HTML",
       "CSS",
-      "Fake Store API",
+      "RESTsful API",
     ],
+  },
+  {
+    id: "the-pavillion",
+    img: pavillionCover,
+    title: "React FakeStore API Integration",
+    description:
+      "Reimagined an earlier API integration project by rebuilding it from scratch with React and Supabase, focusing on scalable component architecture, authentication, responsive UI/UX, and dynamic e-commerce functionality powered by the Fake Store API.",
+    info: "Website",
+    liveLink: "https://m7undo.github.io/fake-store-api/",
+    githubLink: "https://github.com/M7UNDO/fake-store-api",
+    tools: [
+      "React JS",
+      "GSAP",
+      "HTML",
+      "CSS",
+      "RESTsful API",
+      "Supabase Auth",
+    ],
+    hasCaseStudy: false,
   },
 ];
 

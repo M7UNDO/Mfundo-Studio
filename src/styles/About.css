@@ -101,23 +101,21 @@
 
 .tab-btn {
   cursor: pointer;
-  font-family: var(--sans);
   font-size: 1.4rem;
-  font-weight: 500;
-  padding: 1rem 1.5rem;
+  font-weight: 600;
+  padding: 0.5rem 1rem;
   outline: none;
-  background: var(--background-colour);
+  background: var(--typography-colour);
   border: 1px solid var(--typography-colour);
   border-radius: 0.5rem;
-  color: var(--typography-colour);
+  color: var(--background-colour-light);
   transition: all 0.2s ease;
 }
 
 .tab-btn:hover {
-  transform: translateY(-3px);
-  background: transparent;
+  background: var(--accent-colour);
   border-color: var(--accent-colour);
-  color: var(--accent-colour);
+  color: white;
 }
 
 .tab-btn.active {
@@ -134,10 +132,10 @@
 }
 
 .skills-group {
-  padding: 2.5rem;
   background: transparent;
   border-radius: 1.6rem;
   backdrop-filter: blur(1rem);
+  margin: 5rem 0;
 }
 
 .skills-group h3 {
@@ -157,16 +155,18 @@
 
 .skill-tags span {
   padding: 0.5rem 1rem;
-  background: var(--background-colour-light);
-  border: 0.1rem solid rgb(220, 220, 220);
+  background: var(--background-colour);
+  border: 0.1rem solid var(--typography-colour);
   border-radius: 0.5rem;
   color: var(--typography-colour);
   font-family: var(--sans);
   font-size: 1.4rem;
+  font-weight: 500;
   transition: all 0.3s ease;
 }
 
 [data-theme="dark"] .skill-tags span {
+  background-color: var(--background-colour-light);
   border: 0.1rem solid rgba(220, 220, 220, 0.16);
 }
 

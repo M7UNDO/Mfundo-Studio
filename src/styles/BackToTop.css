@@ -2,16 +2,12 @@
   position: fixed;
   bottom: 2rem;
   right: 2rem;
-
-  width: 4rem;
-  height: 5rem;
-
-  border: none;
+  width: 5.5rem;
+  height: 5.5rem;
+  border: 1px solid var(--accent-colour);
   border-radius: 3rem;
-
   background-color: var(--accent-colour);
   color: white;
-
   display: flex;
   justify-content: center;
   align-items: center;
@@ -21,7 +17,7 @@
   font-size: 2rem;
 
   transition: all 0.3s ease;
-
+  opacity: 0.8;
   z-index: 1000;
 }
 
@@ -30,7 +26,8 @@
   background-color: var(--accent-colour-hover);
 }
 
-.back-to-top-btn i, .back-to-top-btn svg {
+.back-to-top-btn i,
+.back-to-top-btn svg {
   stroke-width: 2px;
   pointer-events: none;
 }

@@ -45,6 +45,7 @@ export default function InteractiveMediaPortfolio() {
               liveLink={project.liveLink}
               githubLink={project.githubLink}
               tools={project.tools}
+              hasCaseStudy={project.hasCaseStudy}
             />
           ))}
         </div>

@@ -1,13 +1,20 @@
 import {Link} from "react-router-dom";
 import LinkIcon from "../assets/images/icons/external-link.svg?react";
 import ArrowIcon from "../assets/images/icons/arrow-right.svg?react";
+import "../styles/ProjectCard.css"
 
-export default function ProjectCard({id, src, title, category, description, liveLink, githubLink, tools}) {
+export default function ProjectCard({id, src, title, category, description, liveLink, githubLink, tools, hasCaseStudy = true}) {
   return (
     <article className="project-card">
-      <Link to={`/portfolio/${id}`} className="project-visual-wrapper">
-        <img src={src} alt={title} />
-      </Link>
+      {hasCaseStudy ? (
+        <Link to={`/portfolio/${id}`} className="project-visual-wrapper">
+          <img src={src} alt={title} />
+        </Link>
+      ) : (
+        <div className="project-visual-wrapper">
+          <img src={src} alt={title} />
+        </div>
+      )}
 
       <div className="project-tags-container">
         {category && <span className="project-badge">{category}</span>}
@@ -37,26 +44,31 @@ export default function ProjectCard({id, src, title, category, description, live
           </a>
         )}
       </div>
-      <div className="project-divider"></div>
-      <Link to={`/portfolio/${id}`} className="case-study-link">
-        <span className="link-text">View Case Study</span>
+      
+      {hasCaseStudy && (
+        <>
+          <div className="project-divider"></div>
+          <Link to={`/portfolio/${id}`} className="case-study-link">
+            <span className="link-text">View Case Study</span>
 
-        <span className="arrow-wrapper">
-          <svg
-            className="arrow"
-            xmlns="http://www.w3.org/2000/svg"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            strokeWidth="2"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M5 12h14" />
-            <path d="m12 5 7 7-7 7" />
-          </svg>
-        </span>
-      </Link>
+            <span className="arrow-wrapper">
+              <svg
+                className="arrow"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+              >
+                <path d="M5 12h14" />
+                <path d="m12 5 7 7-7 7" />
+              </svg>
+            </span>
+          </Link>
+        </>
+      )}
     </article>
   );
 }

@@ -1,4 +1,5 @@
 .footer {
+  margin-top: 10rem;
   background-color: var(--background-colour-dark);
   color: #ffffff;
   padding: 6rem 5% 3rem 5%;
@@ -171,7 +172,7 @@
   }
 
   .footer-top {
-    grid-template-columns: 1.5fr 1fr 1fr 1fr 0.8fr;
+    grid-template-columns: 0.7fr 1fr 1fr 1fr 0.8fr;
     gap: 4rem;
   }
 
