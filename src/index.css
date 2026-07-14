@@ -8,8 +8,8 @@
   --badge-font: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas,
     "Liberation Mono", "Courier New", monospace;
 
-  --nav-colour: #0a192f50;
-  --background-colour:  rgb(11, 22, 41);;
+  --nav-colour: #0b162950;
+  --background-colour:  rgb(11, 22, 41);
   --background-colour-light: rgb(17 34 64);
   --background-colour-dark: rgb(11, 22, 41);
   --primary-colour: rgb(255, 255, 255);
@@ -29,7 +29,7 @@
 }
 
 [data-theme="light"] {
-  --accent-colour: #7f5aff;
+  --accent-colour: #754fff;
   --accent-colour-hover: #a890ff;
   
   --nav-colour: #ebebed50;
@@ -49,10 +49,10 @@
 }
 
 [data-theme="dark"] {
-  --accent-colour: #6a41ff;
+  --accent-colour: #8563ff;
   --accent-colour-hover: #a890ff;
 
-  --nav-colour: #0a192fc8;
+  --nav-colour: #0b162950;
   --background-colour: rgb(11, 20, 34);
   --background-colour-dark: rgb(11, 22, 41);
   --background-colour-light: rgb(26, 38, 59);

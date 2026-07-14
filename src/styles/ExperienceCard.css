@@ -22,7 +22,10 @@
   cursor: pointer;
   outline: none;
   gap: 1.25rem;
-  transition: transform 0.2s ease, box-shadow 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .experience-card:hover,
@@ -97,17 +100,6 @@
   flex-wrap: wrap;
 }
 
-.badge-tag {
-  font-family: var(--badge-font);
-  font-size: 1.1rem;
-  font-weight: 700;
-  color: #ffd700;
-  background: rgba(255, 215, 0, 0.1);
-  padding: 0.2rem 0.8rem;
-  border-radius: 2rem;
-  text-transform: capitalize;
-}
-
 .date {
   font-family: var(--secondary-font);
   font-size: 1.3rem;
@@ -125,7 +117,9 @@
   color: var(--typography-colour);
   opacity: 0.5;
   flex-shrink: 0;
-  transition: opacity 0.2s ease, transform 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    transform 0.2s ease;
 }
 
 .experience-card:hover .interaction-indicator {
@@ -146,17 +140,19 @@
 }
 
 .role-description-preview {
-  font-family: var(--primary-font);
-  font-size: 1.4rem;
+  font-family: var(--sans);
+  font-size: 1.6rem;
   color: var(--typography-colour);
   line-height: 1.5;
-  opacity: 0.6;
+  opacity: 0.7;
   display: -webkit-box;
-  -webkit-line-clamp: 2;
+  -webkit-line-clamp: 3;
   -webkit-box-orient: vertical;
   overflow: hidden;
   text-overflow: ellipsis;
-  transition: opacity 0.2s ease, max-height 0.2s ease;
+  transition:
+    opacity 0.2s ease,
+    max-height 0.2s ease;
 }
 
 .experience-timeline-item.expanded .role-description-preview {
@@ -180,12 +176,12 @@
 }
 
 .role-description-full {
-  font-family: var(--primary-font);
+  font-family: var(--sans);
   font-size: 1.4rem;
   color: var(--typography-colour);
   line-height: 1.6;
   opacity: 0.85;
-  border-left: 3px solid var(--accent-colour);
+  border-left: 1px solid var(--accent-colour);
   padding-left: 1.5rem;
 }
 
@@ -252,7 +248,10 @@
     border: 3px solid var(--light-border);
     z-index: 2;
     margin-top: 2.2rem;
-    transition: border-color 0.25s ease, background-color 0.25s ease, box-shadow 0.25s ease;
+    transition:
+      border-color 0.25s ease,
+      background-color 0.25s ease,
+      box-shadow 0.25s ease;
   }
 
   .experience-timeline-item:hover .timeline-node {

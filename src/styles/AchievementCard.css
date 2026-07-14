@@ -9,6 +9,7 @@
 }
 
 .achievement-card {
+  width: 100%;
   display: grid;
   grid-template-columns: auto 1fr;
   align-items: start;
@@ -67,7 +68,7 @@
 }
 
 .achievement-date {
-  font-family: var(--secondary-font);
+  font-family: var(--sans);
   font-size: 1.3rem;
   color: var(--accent-colour);
   font-weight: 600;

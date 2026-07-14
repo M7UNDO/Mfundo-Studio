@@ -143,7 +143,7 @@ export default function Contact() {
       <div className="contact-form-wrapper">
         <div className="contact-details">
           <h2>Contact Details</h2>
-          <div>
+          <div className="contact-holder">
             <div className="icon-bg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -161,10 +161,12 @@ export default function Contact() {
                 <rect x="2" y="4" width="20" height="16" rx="2" />
               </svg>
             </div>
-
-            <a href="mailto:dhlaminimfundo1@gmail.com">dhlaminimfundo1@gmail.com</a>
+            <div className="contact-line">
+              <h4>Email</h4>
+              <a href="mailto:dhlaminimfundo1@gmail.com">dhlaminimfundo1@gmail.com</a>
+            </div>
           </div>
-          <div>
+          <div  className="contact-holder">
             <div className="icon-bg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -181,10 +183,12 @@ export default function Contact() {
                 <path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384" />
               </svg>
             </div>
-
-            <a href="tel:+27829977500">+27 982 997 7500</a>
+            <div className="contact-line">
+              <h4>Phone</h4>
+              <a href="tel:+27829977500">+27 982 997 7500</a>
+            </div>
           </div>
-          <div>
+          <div  className="contact-holder">
             <div className="icon-bg">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -202,8 +206,10 @@ export default function Contact() {
                 <circle cx="12" cy="10" r="3" />
               </svg>
             </div>
-
-            <span>Johannesburg, South Africa</span>
+            <div className="contact-line">
+              <h4>Location</h4>
+              <span>Johannesburg, South Africa</span>
+            </div>
           </div>
         </div>
         <form id="contact-form" onSubmit={handleSubmit} noValidate>

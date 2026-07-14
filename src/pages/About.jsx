@@ -1,4 +1,4 @@
-import React, {useRef} from "react";
+import React, {useRef, useState} from "react";
 import ExperienceCard from "../components/ExperienceCard";
 import AchievementCard from "../components/AchievementCard";
 import {gsap} from "gsap";
@@ -10,6 +10,8 @@ import profileImg from "../assets/profile/M7UNDO_Pfp.png";
 gsap.registerPlugin(ScrollTrigger);
 
 export default function About() {
+  const [activeTab, setActiveTab] = useState("Front-End Development");
+
   const experienceData = [
     {
       id: 0,
@@ -46,33 +48,16 @@ export default function About() {
   ];
 
   const achievementData = [
-    {
-      id: 0,
-      achievement: "Golden Key Honour Society",
-      institution: "University of the Witwatersrand",
-      date: "2024",
-    },
+    {id: 0, achievement: "Golden Key Honour Society", institution: "University of the Witwatersrand", date: "2024"},
     {
       id: 1,
-      achievement: "Certificate of First Class - AFRL1003A • Elementary isiZulu Language and Culture IA",
-      institution: "University of the Witwatersrand",
-      date: "2023",
-    },
-    {
-      id: 2,
-      achievement: "Certificate of First Class - AFRL1004A • Elementary isiZulu Language and Culture IB",
-      institution: "University of the Witwatersrand",
-      date: "2023",
-    },
-    {
-      id: 3,
-      achievement: "Certificate of First Class - WSOA1003A • Film, Visual and Performing Arts IB",
+      achievement: "Certificate of First Class - AFRL1003A • Elementary isiZulu IA",
       institution: "University of the Witwatersrand",
       date: "2023",
     },
     {
       id: 4,
-      achievement: "Certificate of First Class - WSOA2021A • Storytelling Across Media and Cultural Contexts",
+      achievement: "Certificate of First Class - WSOA2021A • Storytelling Across Media",
       institution: "University of the Witwatersrand",
       date: "2024",
     },
@@ -94,214 +79,136 @@ export default function About() {
       institution: "Krugersdorp High School, Vega School",
       date: "2022",
     },
-    {
-      id: 8,
-      achievement: "Matric Top Design Student",
-      institution: "Krugersdorp High School",
-      date: "2022",
-    },
-    {
-      id: 9,
-      achievement: "Matric Top 20 (6th Place)",
-      institution: "Krugersdorp High School",
-      date: "2022",
-    },
-    {
-      id: 9,
-      achievement: "The Campus Game Jam - Runner Up",
-      institution: "University of The Witwatersrand",
-      date: "2026",
-    },
-    {
-      id: 9,
-      achievement: "The Campus Game Jam - Community Favourite Winner",
-      institution: "University of The Witwatersrand",
-      date: "2026",
-    },
+    {id: 8, achievement: "Matric Top Design Student", institution: "Krugersdorp High School", date: "2022"},
+    {id: 9, achievement: "Matric Top 20 (6th Place)", institution: "Krugersdorp High School", date: "2022"},
   ];
 
-  const sortedAchievements =  [...achievementData].sort((a,b)=>(b.date.localeCompare(a.date)));
+  const skillsData = {
+    "Front-End Development": [
+      "HTML5",
+      "CSS3",
+      "JavaScript (ES6+)",
+      "React.js",
+      "Vite",
+      "Git/GitHub",
+      "GSAP",
+      "REST APIs",
+      "Responsive Design",
+      "Component Architecture",
+      "Semantic Markup",
+      "Supabase",
+    ],
+    "UI/UX Design": [
+      "Interaction Design",
+      "User Flows",
+      "Journey Mapping",
+      "User Personas",
+      "Usability Testing",
+      "Figma",
+      "Adobe Illustrator",
+      "Wireframing",
+      "Prototyping",
+      "Design Systems",
+      "Typography",
+      "Colour Theory",
+    ],
+    "Game Design": [
+      "Game Design",
+      "Unity",
+      "C#",
+      "Multiplayer Netcode",
+      "3D Modelling",
+      "Level Design",
+      "Sound Design",
+    ],
+    Other: [
+      "BPMN Process Modelling",
+      "Business Process Analysis",
+      "Process Documentation",
+      "Signavio",
+      "Time Management",
+      "Problem Solving",
+    ],
+  };
 
+  const sortedAchievements = [...achievementData].sort((a, b) => b.date.localeCompare(a.date));
   const container = useRef();
+  const skillsContainerRef = useRef();
+
+  // Handle Tab Switch Animation
+  const handleTabChange = (tab) => {
+    if (tab === activeTab) return;
+
+    gsap.to(".skill-tags span", {
+      opacity: 0,
+      y: -10,
+      duration: 0.2,
+      stagger: 0.02,
+      onComplete: () => {
+        setActiveTab(tab);
+        gsap.fromTo(
+          ".skill-tags span",
+          {opacity: 0, y: 15, scale: 0.95},
+          {opacity: 1, y: 0, scale: 1, duration: 0.4, stagger: 0.03, ease: "back.out(1.5)"},
+        );
+      },
+    });
+  };
 
   useGSAP(
     () => {
-      const tl = gsap.timeline({
-        defaults: {
-          ease: "power3.out",
-          duration: 0.8,
-        },
-      });
+      let mm = gsap.matchMedia();
 
-
-      tl.fromTo(
-        ".about-badge",
+      // Setup viewport-specific animations
+      mm.add(
         {
-          opacity: 0,
-          y: 18,
+          isDesktop: "(min-width: 768px)",
+          isMobile: "(max-width: 767px)",
         },
-        {
-          opacity: 1,
-          y: 0,
-          duration: 0.6,
+        (context) => {
+          let {isMobile} = context.conditions;
+
+          const tl = gsap.timeline({
+            scrollTrigger: {
+              trigger: container.current,
+              start: "top 80%",
+              once: true,
+            },
+            defaults: {ease: "power3.out", duration: 0.8},
+          });
+
+          tl.fromTo(".about-badge", {opacity: 0, y: 20}, {opacity: 1, y: 0})
+            .fromTo(".about-title", {opacity: 0, y: 30}, {opacity: 1, y: 0}, "-=0.6")
+            .fromTo(
+              ".profile",
+              {opacity: 0, x: isMobile ? 0 : 40, y: isMobile ? 30 : 0, scale: 0.95},
+              {opacity: 1, x: 0, y: 0, scale: 1, duration: 1, ease: "power4.out"},
+              "-=0.5",
+            )
+            .fromTo(
+              ".bio-text p",
+              {opacity: 0, x: isMobile ? 0 : -20, y: isMobile ? 20 : 0},
+              {opacity: 1, x: 0, y: 0, stagger: 0.15},
+              "-=0.6",
+            )
+            .fromTo(".experience-grid .section-label", {opacity: 0, y: 20}, {opacity: 1, y: 0}, "-=0.4")
+            .fromTo(".experience-card", {opacity: 0, y: 30}, {opacity: 1, y: 0, stagger: 0.15}, "-=0.6")
+            .fromTo(".bottom-grid .section-label", {opacity: 0, y: 20}, {opacity: 1, y: 0, stagger: 0.2}, "-=0.4")
+            .fromTo(".skills-tabs", {opacity: 0, y: 15}, {opacity: 1, y: 0}, "-=0.5")
+            .fromTo(
+              ".skill-tags span",
+              {opacity: 0, y: 15, scale: 0.9},
+              {opacity: 1, y: 0, scale: 1, stagger: 0.04, duration: 0.5, ease: "back.out(1.5)"},
+              "-=0.4",
+            )
+            .fromTo(
+              ".achievement-item",
+              {opacity: 0, x: isMobile ? 0 : 20, y: isMobile ? 20 : 0},
+              {opacity: 1, x: 0, y: 0, stagger: 0.1},
+              "-=0.6",
+            );
         },
-      )
-        .fromTo(
-          ".profile",
-          {
-            opacity: 0,
-            x: 40,
-            scale: 0.96,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            scale: 1,
-            duration: 1,
-            ease: "power4.out",
-          },
-          "-=0.25",
-        )
-        .fromTo(
-          ".about-title",
-          {
-            opacity: 0,
-            y: 34,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.9,
-          },
-          "-=0.35",
-        )
-
-        .fromTo(
-          ".bio-text p",
-          {
-            opacity: 0,
-            x: -24,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            stagger: 0.18,
-            duration: 0.8,
-          },
-          "-=0.45",
-        )
-        .fromTo(
-          ".bio-text blockquote",
-          {
-            opacity: 0,
-            y: 24,
-            scale: 0.98,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            duration: 0.75,
-          },
-          "-=0.25",
-        )
-
-        // =========================
-        // EXPERIENCE SECTION
-        // =========================
-
-        .fromTo(
-          ".experience-grid .section-label",
-          {
-            opacity: 0,
-            y: 24,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.7,
-          },
-          "-=0.15",
-        )
-
-        .fromTo(
-          ".experience-card",
-          {
-            opacity: 0,
-            y: 32,
-            scale: 0.98,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            stagger: 0.14,
-            duration: 0.75,
-          },
-          "-=0.2",
-        )
-
-
-        .fromTo(
-          ".skills-column .section-label",
-          {
-            opacity: 0,
-            y: 20,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.65,
-          },
-          "-=0.2",
-        )
-
-        .fromTo(
-          ".skill-tags span",
-          {
-            opacity: 0,
-            y: 16,
-            scale: 0.94,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            scale: 1,
-            stagger: 0.06,
-            duration: 0.45,
-            ease: "back.out(1.7)",
-          },
-          "-=0.3",
-        )
-
-        .fromTo(
-          ".achievements-column .section-label",
-          {
-            opacity: 0,
-            y: 20,
-          },
-          {
-            opacity: 1,
-            y: 0,
-            duration: 0.65,
-          },
-          "-=0.25",
-        )
-
-        .fromTo(
-          ".achievement-item",
-          {
-            opacity: 0,
-            x: 24,
-          },
-          {
-            opacity: 1,
-            x: 0,
-            stagger: 0.1,
-            duration: 0.65,
-          },
-          "-=0.45",
-        );
+      );
     },
     {scope: container},
   );
@@ -315,21 +222,19 @@ export default function About() {
             <h1 className="about-title">
               Experience & <span>Expertise.</span>
             </h1>
-
             <div className="bio-text">
               <p>
-                I'm a final-year Digital Arts student at the University of the Witwatersrand, majoring in Interactive
-                Media and Game Design. Over the past few years, I've discovered that what I enjoy most is building
-                digital products that solve real problems while creating experiences people genuinely enjoy using.
+                I'm a fourth-year Honors Digital Arts student at the University of the Witwatersrand, majoring in
+                Interactive Media and Game Design. Over the past few years, I've discovered that what I enjoy most is
+                building digital products that solve real problems while creating experiences people genuinely enjoy
+                using.
               </p>
-
               <p>
-                My journey started with HTML, CSS and JavaScript, where I developed a strong appreciation for clean code
-                and thoughtful user interfaces. Since then, I've expanded into React development, UX design and product
-                design, working on both commercial client projects and university products from research and planning
-                through to implementation.
+                My journey started with HTML, CSS, and JavaScript, where I developed a strong appreciation for clean
+                code and thoughtful user interfaces. Since then, I've expanded into React development, UX design, and
+                product design, working on both commercial client projects and university products from research and
+                planning through to implementation.
               </p>
-
               <p>
                 What motivates me isn't just building something that works. I enjoy understanding the people I'm
                 designing for, the business challenges behind a product, and how thoughtful design and technology can
@@ -339,22 +244,15 @@ export default function About() {
             </div>
           </div>
           <div>
-            <img src={profileImg} alt="" className="profile" />
+            <img src={profileImg} alt="Profile" className="profile" />
           </div>
         </div>
 
         <div className="experience-grid">
           <h3 className="section-label">Freelance Projects</h3>
-
           <div className="experience-list">
             {experienceData.map((experience) => (
-              <ExperienceCard
-                key={experience.id}
-                client={experience.client}
-                date={experience.date}
-                role={experience.role}
-                description={experience.description}
-              />
+              <ExperienceCard key={experience.id} {...experience} />
             ))}
           </div>
         </div>
@@ -362,73 +260,33 @@ export default function About() {
         <div className="bottom-grid">
           <div className="skills-column">
             <h2 className="section-label">Technical Stack</h2>
-
             <div className="skills-group">
-              <h3>Front-End Development</h3>
-
-              <div className="skill-tags">
-                <span>HTML</span>
-                <span>CSS</span>
-                <span>JavaScript</span>
-                <span>TypeScript</span>
-                <span>React</span>
-                <span>GSAP</span>
-                <span>RESTful APIs</span>
-                <span>SEO Optimisation</span>
-                <span>Responsive Design</span>
-                <span>Web Accessibility</span>
-                <span>Git & GitHub</span>
-                <span>Interactive Media</span>
+              <div className="skills-tabs">
+                {Object.keys(skillsData).map((tab) => (
+                  <button
+                    key={tab}
+                    className={`tab-btn ${activeTab === tab ? "active" : ""}`}
+                    onClick={() => handleTabChange(tab)}
+                  >
+                    {tab}
+                  </button>
+                ))}
               </div>
-            </div>
 
-            <div className="skills-group">
-              <h3>UI/UX Design</h3>
-
-              <div className="skill-tags">
-                <span>Interaction Design</span>
-                <span>User Flows</span>
-                <span>User Personas</span>
-                <span>Journey Mapping</span>
-                <span>Wireframing</span>
-                <span>High-Fidelity Prototyping</span>
-                <span>Information Architecture</span>
-                <span>Usability Testing</span>
-                <span>Design Systems</span>
-                <span>Typography</span>
-                <span>Colour Theory</span>
-                <span>Figma</span>
-                <span>Illustrator</span>
-              </div>
-            </div>
-
-            <div className="skills-group">
-              <h3>Game Development</h3>
-
-              <div className="skill-tags">
-                <span>Game Design</span>
-                <span>Unity</span>
-                <span>Unreal Engine</span>
-                <span>C#</span>
-                <span>C++</span>
-                <span>3D Modelling</span>
-                <span>Level Design</span>
-                <span>Sound Design</span>
+              <div className="skill-tags" ref={skillsContainerRef}>
+                {skillsData[activeTab].map((skill, index) => (
+                  <span key={index}>{skill}</span>
+                ))}
               </div>
             </div>
           </div>
-          <div className="achievements-column">
-            <h2 className="section-label">Achievements</h2>
-            <div className="achievement-list">
-              {sortedAchievements.map((achievement) => (
-                <AchievementCard
-                  key={achievement.id}
-                  achievement={achievement.achievement}
-                  date={achievement.date}
-                  institution={achievement.institution}
-                />
-              ))}
-            </div>
+        </div>
+        <div className="achievements-column">
+          <h2 className="section-label">Achievements</h2>
+          <div className="achievement-list">
+            {sortedAchievements.map((achievement) => (
+              <AchievementCard key={achievement.id} {...achievement} />
+            ))}
           </div>
         </div>
       </div>

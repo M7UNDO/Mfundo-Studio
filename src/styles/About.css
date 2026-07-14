@@ -78,60 +78,7 @@
   gap: 2.5rem;
   margin: 5rem 0;
 }
-/*
-.experience-card {
-  background: var(--background-colour-light);
-  border: 1px solid var(--light-border);
-  box-shadow:
-    0 1rem 3rem rgba(0, 0, 0, 0.06),
-    0 0.2rem 0.8rem rgba(0, 0, 0, 0.04);
-  padding: 3rem;
-  border-radius: 1rem;
-  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-}
 
-.experience-card.active {
-  background:  linear-gradient(135deg, var(--accent-colour), rgb(110, 8, 158)  100%);
-  border-color: rgba(255, 255, 255, 0.3);
-  color: white;
-}
-
-.experience-card.active h4{
-  color: white;
-}
-
-.experience-card:hover {
-  transform: translateY(-5px);
-}
-
-.card-header {
-  margin-bottom: 1.5rem;
-}
-
-.card-header h3 {
-  font-size: 1.8rem;
-  font-weight: 400;
-  margin-bottom: 0.5rem;
-}
-
-.card-header .date {
-  font-size: 1.3rem;
-  font-weight: 600;
-}
-
-.experience-card h4 {
-  font-size: 1.4rem;
-  margin-bottom: 1.5rem;
-  color: var(--accent-colour);
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-}
-
-.experience-card p {
-  font-size: 1.4rem;
-  line-height: 1.6;
-}
-*/
 .reference-info {
   margin-top: 2rem;
   padding-top: 1.5rem;
@@ -145,6 +92,40 @@
   grid-template-columns: 1fr;
   gap: 4rem;
 }
+
+.skills-tabs {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.tab-btn {
+  cursor: pointer;
+  font-family: var(--sans);
+  font-size: 1.4rem;
+  font-weight: 500;
+  padding: 1rem 1.5rem;
+  outline: none;
+  background: var(--background-colour-light);
+  border: 1px solid var(--typography-colour);
+  border-radius: 0.5rem;
+  background: var(--background-colour);
+  color: var(--typography-colour);
+  transition: all 0.2s ease;
+}
+
+.tab-btn:hover {
+  transform: translateY(-3px);
+  background:transparent;
+  border-color: var(--accent-colour);
+  color: var(--accent-colour);
+}
+
+.tab-btn.active {
+  background: var(--accent-colour);
+  border-color: var(--accent-colour);
+  color: white;
+}
+
 
 .skills-column {
   display: flex;
@@ -162,13 +143,13 @@
 
 .skills-group h3 {
   width: fit-content;
-  font-family:var(--sans);
+  font-family: var(--sans);
   font-size: 1.6rem;
   font-weight: 400;
 }
 
 .skill-tags {
-  font-family:var(--sans);
+  font-family: var(--sans);
   margin-top: 2rem;
   display: flex;
   flex-wrap: wrap;
@@ -177,13 +158,18 @@
 
 .skill-tags span {
   padding: 0.5rem 1rem;
-  background: rgba(127, 90, 255, 0.08);
-  border: 0.1rem solid var(--accent-colour);
-  border-radius: 0.8rem;
+  background: var(--background-colour-light);
+  border: 0.1rem solid rgb(220, 220, 220);
+  border-radius: 0.5rem;
   color: var(--typography-colour);
   font-family: var(--sans);
   font-size: 1.4rem;
   transition: all 0.3s ease;
+}
+
+[data-theme="dark"] .skill-tags span{
+  border: 0.1rem solid rgba(220, 220, 220, 0.16);
+
 }
 
 .skill-tags span:hover {
@@ -193,34 +179,16 @@
   color: #fff;
 }
 
-.achievements-column{
+.achievements-column {
   margin: 5rem 0;
 }
 
-.achievement-list{
-  width: 75%;
+.achievement-list {
+  width: 100%;
   display: flex;
   flex-direction: column;
-  margin: 2rem 0;
+  margin: 5rem 0;
   gap: 1rem;
-}
-
-.achievement-item {
-  padding: 2rem;
-  background: var(--background-colour-light);
-  border: 1px solid var(--light-border);
-  border-radius: 16px;
-}
-
-.achievement-item strong {
-  display: block;
-  font-size: 1.6rem;
-  margin-bottom: 0.4rem;
-}
-
-.achievement-item p {
-  font-size: 1.3rem;
-  opacity: 0.7;
 }
 
 @media (min-width: 768px) {
@@ -252,5 +220,9 @@
 
   .bottom-container {
     grid-template-columns: 1.5fr 1fr;
+  }
+
+  .section-label {
+    font-size: 1.8rem;
   }
 }
