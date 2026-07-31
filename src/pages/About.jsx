@@ -81,6 +81,8 @@ export default function About() {
     },
     {id: 8, achievement: "Matric Top Design Student", institution: "Krugersdorp High School", date: "2022"},
     {id: 9, achievement: "Matric Top 20 (6th Place)", institution: "Krugersdorp High School", date: "2022"},
+    {id: 10, achievement: "The Campus Game Jam - Runner Up", institution: "University of the Witwatersrand", date: "2026"},
+    {id: 11, achievement: "The Campus Game Jam - Community Favourite Game", institution: "University of the Witwatersrand", date: "2026"},
   ];
 
   const skillsData = {

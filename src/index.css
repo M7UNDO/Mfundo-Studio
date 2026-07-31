@@ -52,7 +52,7 @@
   --accent-colour: #8563ff;
   --accent-colour-hover: #a890ff;
 
-  --nav-colour: #0b162970;
+  --nav-colour: #0b142270;
   --background-colour: rgb(11, 20, 34);
   --background-colour-dark: rgb(6, 13, 23);
   --background-colour-light: rgb(26, 38, 59);
@@ -103,6 +103,6 @@ select {
   font: inherit;
 }
 
-.badge{
+.badge, .about-badge{
   font-family: var(--badge-font);
 }

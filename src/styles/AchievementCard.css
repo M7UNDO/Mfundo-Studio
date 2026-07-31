@@ -68,10 +68,10 @@
 }
 
 .achievement-date {
-  font-family: var(--sans);
+  font-family: var(--badge-font);
   font-size: 1.3rem;
   color: var(--accent-colour);
-  font-weight: 600;
+  font-weight: 500;
   background: var(--icon-bg);
   padding: 0.2rem 0.8rem;
   border-radius: 0.4rem;
